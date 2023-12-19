@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Faltam poucas horas para maior evento do ano</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas">
+		<link rel="stylesheet" href="./compiled/flipclock.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="./compiled/flipclock.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+		<style type="text/css">
+			body {
+				color: green;
+			}
+			h2 {
+				color: red;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				font-family: 'Mountains of Christmas', serif;
+				text-align: center;
+			}
+			.clock, .clock2 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			@media only screen and (max-width: 600px) {
+				.flip-clock-wrapper ul {
+					margin: 5px;
+					width: 40px;
+					font-size: 52px;
+					line-height: 87px;
+				}
+				.flip-clock-wrapper ul li a div {
+				  font-size: 52px;
+				}
+				.flip-clock-wrapper ul li a div div.inn {
+					font-size: 52px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Faltam poucas horas para maior evento do ano:</h1>
+			<h2>Festa de Natal da Família Araújo & Convidados</h2>
+			<div class="clock" style="margin:2em;"></div>
+
+			<hr />
+
+			<h2>Festa de Ano Novo da Família Araújo & Convidados</h2>
+			<div class="clock2" style="margin:2em;"></div>
+		</div>
+
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock2').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: false
+				});
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear(), 11, 25);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: false
+				});
+
+				var duration = 15 * 1000;
+				var animationEnd = Date.now() + duration;
+				var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+				function randomInRange(min, max) {
+					return Math.random() * (max - min) + min;
+				}
+
+				var interval = setInterval(function() {
+					var timeLeft = animationEnd - Date.now();
+
+					if (timeLeft <= 0) {
+						return clearInterval(interval);
+					}
+
+					var particleCount = 50 * (timeLeft / duration);
+					// since particles fall down, start a bit higher than random
+					confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+					confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+				}, 250);
+			});
+		</script>
+	</body>
+</html>
