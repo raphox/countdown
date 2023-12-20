@@ -5,7 +5,7 @@
 		<meta property="og:title" content="Faltam poucas horas para maior evento do ano" />
 		<meta property="og:description" content="Festa de Natal da Família Araújo & Convidados" />
 		<meta property="og:image" content="https://raw.githubusercontent.com/raphox/countdown/74351d86272487a24f1a8e33f226746c0bc7175d/compiled/fim%20de%20ano.png" />
-		<title>Faltam poucas horas para maior evento do ano</title>
+		<title>Faltam poucas horas para maior o evento do ano</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas">
 		<link rel="stylesheet" href="./compiled/flipclock.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -50,7 +50,11 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Faltam poucas horas para maior evento do ano:</h1>
+			<h1>Faltam poucas horas para o maior evento do ano:</h1>
+			<h2>Chegada da primeira leva de convidados</h2>
+			<div class="clock3" style="margin:2em;"></div>
+
+			<hr />
 			<h2>Festa de Natal da Família Araújo & Convidados</h2>
 			<div class="clock" style="margin:2em;"></div>
 
@@ -65,6 +69,12 @@
 
 			$(document).ready(function() {// Grab the current date
 				var currentDate = new Date();
+				const options = {
+					clockFace: 'DailyCounter',
+					language: 'pt',
+					countdown: true,
+					showSeconds: window.screen.width >= 600
+				}
 
 				// Set some date in the future. In this case, it's always Jan 1
 				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
@@ -73,26 +83,25 @@
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 				// Instantiate a coutdown FlipClock
-				clock = $('.clock2').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					language: 'pt',
-					countdown: true,
-					showSeconds: window.screen.width >= 600
-				});
+				clock = $('.clock2').FlipClock(diff, options);
 
-				// Set some date in the future. In this case, it's always Jan 1
+				// Set some date in the future. In this case, it's always Dec 25
 				var futureDate  = new Date(currentDate.getFullYear(), 11, 25);
 
 				// Calculate the difference in seconds between the future and current date
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 				// Instantiate a coutdown FlipClock
-				clock = $('.clock').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					language: 'pt',
-					countdown: true,
-					showSeconds: window.screen.width >= 600
-				});
+				clock = $('.clock').FlipClock(diff, options);
+
+				// Set some date in the future. In this case, it's always Dec 23 5PM
+				var futureDate  = new Date(currentDate.getFullYear(), 11, 23, 17);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock3').FlipClock(diff, options);
 
 				var duration = 15 * 1000;
 				var animationEnd = Date.now() + duration;
