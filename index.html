@@ -27,7 +27,7 @@
 				font-family: 'Mountains of Christmas', serif;
 				text-align: center;
 			}
-			.clock, .clock2 {
+			.clock {
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -52,16 +52,16 @@
 		<div class="container">
 			<h1>Faltam poucas horas para o maior evento do ano:</h1>
 			<h2>Chegada da primeira leva de convidados</h2>
-			<div class="clock3" style="margin:2em;"></div>
+			<div id="clock1" class="clock3" style="margin:2em;"></div>
 
 			<hr />
 			<h2>Festa de Natal da Família Araújo & Convidados</h2>
-			<div class="clock" style="margin:2em;"></div>
+			<div id="clock2" class="clock" style="margin:2em;"></div>
 
 			<hr />
 
 			<h2>Festa de Ano Novo da Família Araújo & Convidados</h2>
-			<div class="clock2" style="margin:2em;"></div>
+			<div id="clock3" class="clock2" style="margin:2em;"></div>
 		</div>
 
 		<script type="text/javascript">
@@ -83,7 +83,7 @@
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 				// Instantiate a coutdown FlipClock
-				clock = $('.clock2').FlipClock(diff, options);
+				clock = $('#clock3').FlipClock(diff, options);
 
 				// Set some date in the future. In this case, it's always Dec 25
 				var futureDate  = new Date(currentDate.getFullYear(), 11, 25);
@@ -92,7 +92,7 @@
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 				// Instantiate a coutdown FlipClock
-				clock = $('.clock').FlipClock(diff, options);
+				clock = $('#clock2').FlipClock(diff, options);
 
 				// Set some date in the future. In this case, it's always Dec 23 5PM
 				var futureDate  = new Date(currentDate.getFullYear(), 11, 23, 17);
@@ -101,7 +101,7 @@
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 				// Instantiate a coutdown FlipClock
-				clock = $('.clock3').FlipClock(diff, options);
+				clock = $('#clock1').FlipClock(diff, options);
 
 				var duration = 15 * 1000;
 				var animationEnd = Date.now() + duration;
