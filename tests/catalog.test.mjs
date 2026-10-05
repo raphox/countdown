@@ -15,7 +15,7 @@ const expected = new Map([
   ['viagem', 'Viagem e férias'], ['cha-de-bebe', 'Chá de bebê'],
   ['evento-tecnologia', 'Evento de tecnologia'],
   ['evento-medicina', 'Evento de medicina e saúde'],
-  ['evento-direito', 'Evento de direito e jurídico'], ['festa', 'Festa genérica'],
+  ['evento-direito', 'Evento de direito e jurídico'], ['festa', 'Festa genérica'], ['evento-politico', 'Evento político'], ['zoeira', 'Zoeira'], ['encontro-amigos', 'Encontro de amigos'], ['jantar', 'Jantar'],
 ]);
 const prefix = `/${(process.env.BASE_PATH ?? '/').split('/').filter(Boolean).join('/')}`;
 const base = prefix === '/' ? '/' : `${prefix}/`;
@@ -52,8 +52,8 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
   const home = await homeResponse.text();
   assert.match(home, /<html lang="pt-BR"/);
   assert.match(home, /<main id="conteudo" tabindex="-1">/);
-  assert.ok(home.includes(`<link rel="canonical" href="${site}${base}"`));
-  assert.equal([...home.matchAll(/data-theme-slug="/g)].length, 15);
+  assert.ok(home.includes(`<link rel="canonical" href="${site}${base}pt-br/"`));
+  assert.equal([...home.matchAll(/data-theme-slug="/g)].length, 19);
   assert.match(home, /id="theme-search"[^>]*hidden/);
   assert.match(home, /id="theme-search-index"[^>]*type="application\/json"/);
   const executable = [...home.matchAll(/<script([^>]*)>/g)].map((match) => match[1]).filter((attrs) => !attrs.includes('application/json'));
@@ -68,12 +68,12 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
     if (url.startsWith('http')) assert.ok(url.startsWith(site), `external resource: ${url}`);
   }
   for (const [slug, name] of expected) {
-    assert.ok(hrefs.includes(htmlPath(slug)), `catalog link missing: ${slug}`);
+    assert.ok(hrefs.includes(`${base}pt-br/${slug}/`), `catalog link missing: ${slug}`);
     const response = await fetch(`${origin}${htmlPath(slug)}`);
     assert.equal(response.status, 200, slug);
     const page = await response.text();
     assert.ok(page.includes(`<h1 id="theme-title">${name}`), slug);
-    assert.ok(page.includes(`href="${base}"`), `return link missing: ${slug}`);
+    assert.ok(page.includes(`href="${base}pt-br/"`), `return link missing: ${slug}`);
     assert.match(page, /fuso horário/);
     assert.match(page, /id="event-app"/);
     assert.match(page, /id="event-form"/);
@@ -92,5 +92,5 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
   const missing = await fetch(`${origin}${htmlPath('tema-inexistente')}`);
   assert.equal(missing.status, 404);
   const notFound = await readFile(resolve('dist/404.html'), 'utf8');
-  assert.ok(notFound.includes(`href="${base}"`));
+  assert.ok(notFound.includes(`href="${base}pt-br/"`));
 });

@@ -29,7 +29,7 @@ for (const initial of ['', 'formatura']) test(`shipped UI initializes restored v
     assert.deepEqual(visibleResults(), ['formatura-fundamental', 'formatura-ensino-medio', 'formatura-faculdade']);
     assert.equal(ids['search-count'].textContent, '3 temas encontrados');
     assert.ok(groups.every((group) => group.hidden));
-  } else assert.equal(ids['search-count'].textContent, '15 temas encontrados');
+  } else assert.equal(ids['search-count'].textContent, '19 temas encontrados');
   function query(value, expected) {
     input.value = value; input.dispatch('input');
     assert.deepEqual(visibleResults(), expected);
@@ -37,8 +37,8 @@ for (const initial of ['', 'formatura']) test(`shipped UI initializes restored v
     assert.equal(document.activeElement, input);
   }
   query('festa', ['aniversario', 'natal', 'casamento', 'festa']);
-  query('confraternização', ['empresa', 'natal']);
-  query('eventos', ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa']);
+  query('confraternização', ['empresa', 'natal', 'jantar']);
+  query('eventos', ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa', 'evento-politico']);
   query('niver', ['aniversario', 'formatura-faculdade']);
   query('vers', ['aniversario', 'formatura-faculdade']);
   query('tec', ['evento-tecnologia']);
@@ -52,7 +52,7 @@ for (const initial of ['', 'formatura']) test(`shipped UI initializes restored v
   function assertRestored() {
     assert.equal(input.value, '');
     assert.equal(document.activeElement, input);
-    assert.equal(ids['search-count'].textContent, '15 temas encontrados');
+    assert.equal(ids['search-count'].textContent, '19 temas encontrados');
     assert.equal(ids['search-empty'].hidden, true);
     assert.equal(ids['search-results'].hidden, true);
     assert.ok(groups.every((group) => !group.hidden));
@@ -63,6 +63,6 @@ for (const initial of ['', 'formatura']) test(`shipped UI initializes restored v
   query('SAÚDE', ['evento-medicina']);
   ids['clear-search'].focus(); ids['clear-search'].dispatch('click'); assertRestored();
   input.value = '--- !'; input.dispatch('input');
-  assert.equal(ids['search-count'].textContent, '15 temas encontrados');
+  assert.equal(ids['search-count'].textContent, '19 temas encontrados');
   assert.equal(requests, 0);
 });

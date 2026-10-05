@@ -16,12 +16,13 @@
   "exports": {
     "tool": "sharp",
     "version": "0.35.5",
-    "compression": "PNG palette quality100, Floyd-Steinberg dither0.75, effort10, zlib9; no text overlays",
+    "compression": "PNG palette quality100, Floyd-Steinberg dither0.75, effort10, zlib9; no text overlays; OG falls back to palette quality80/dither0.3 if needed for the 500 KB budget",
     "servedMobile": "540x960 responsive PNG, <=600000 bytes; full 1080x1920 export and original preserved but not loaded automatically"
   },
   "themes": [
     {
       "slug": "aniversario",
+      "review": "Approved for gender-inclusive occasions: no people, gender symbols or exclusive gender roles; occasion-only balloons and ribbons.",
       "originals": [
         {
           "path": "art/originals/aniversario-desktop.png",
@@ -93,6 +94,7 @@
     },
     {
       "slug": "ano-novo",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/ano-novo-desktop.png",
@@ -166,6 +168,7 @@
     },
     {
       "slug": "natal",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/natal-desktop.png",
@@ -239,6 +242,7 @@
     },
     {
       "slug": "familia",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/familia-desktop.png",
@@ -312,6 +316,7 @@
     },
     {
       "slug": "empresa",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/empresa-desktop.png",
@@ -385,6 +390,7 @@
     },
     {
       "slug": "formatura-fundamental",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/formatura-fundamental-desktop.png",
@@ -458,6 +464,7 @@
     },
     {
       "slug": "formatura-ensino-medio",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/formatura-ensino-medio-desktop.png",
@@ -531,6 +538,7 @@
     },
     {
       "slug": "formatura-faculdade",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/formatura-faculdade-desktop.png",
@@ -604,6 +612,7 @@
     },
     {
       "slug": "casamento",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/casamento-desktop.png",
@@ -677,6 +686,7 @@
     },
     {
       "slug": "viagem",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/viagem-desktop.png",
@@ -750,6 +760,7 @@
     },
     {
       "slug": "cha-de-bebe",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/cha-de-bebe-desktop.png",
@@ -823,6 +834,7 @@
     },
     {
       "slug": "evento-tecnologia",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/evento-tecnologia-desktop.png",
@@ -896,6 +908,7 @@
     },
     {
       "slug": "evento-medicina",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/evento-medicina-desktop.png",
@@ -969,6 +982,7 @@
     },
     {
       "slug": "evento-direito",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/evento-direito-desktop.png",
@@ -1042,6 +1056,7 @@
     },
     {
       "slug": "festa",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
       "originals": [
         {
           "path": "art/originals/festa-desktop.png",
@@ -1110,6 +1125,306 @@
           "height": 630,
           "bytes": 304316,
           "sha256": "f1304b7a90e13ab3d0b0f91da6b041c49458e712974ac20ee0ecd553a94f43dc"
+        }
+      }
+    },
+    {
+      "slug": "evento-politico",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
+      "originals": [
+        {
+          "path": "art/originals/evento-politico-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1925733,
+          "sha256": "5396656daf357e24e341aafd36c1f2181d4fc4f2ff83813c6a5732730415194b"
+        },
+        {
+          "path": "art/originals/evento-politico-mobile.png",
+          "width": 940,
+          "height": 1673,
+          "bytes": 1810950,
+          "sha256": "3c77fd1c910b5959df27f79e6dd05f939b87fd2a3a7a40bc2ec5be09f5d70912"
+        }
+      ],
+      "promptManifest": "art/evento-politico-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final premium PNG background for a cheerful political event countdown. LANDSCAPE 16:9. User requests a LIGHT background and MUCH LARGER generic flags. Bright warm ivory/cream gently textured backdrop, even soft daylight, absolutely no dark background. Four very large billowing plain solid-color fabric flags, two at the left outer side/corners and two at the right outer side/corners, cropped by the image edges so they feel monumental and festive. Colors teal, warm golden yellow, coral and soft violet, no specific national combination. Flags have elegant broad fabric folds and long subtle poles; tasteful sparse confetti near edges. Flags occupy the outer left 20% and right 20%, upper/lower corners with confident large scale, but central 60% width and central 65% height remain empty clean light cream for dark HTML title and countdown. A jubilant public celebration, welcoming, polished realistic tactile fabric with subtle soft shadows. No columns, podium, mic, documents, people, gender cues, party/national emblems, stripes, text, numbers, logos or watermark. Artwork only, no UI.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-22cb0dc4-7a9e-41c3-b2cd-c0f9c859f2f8.png",
+          "original": "originals/evento-politico-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: supplied LIGHT political-event artwork with large flowing flags. Create a dedicated PORTRAIT 9:16 mobile PNG, not a crop. Preserve bright warm ivory paper background, large plain teal/coral/golden-yellow/violet fabric flags, realistic folds, soft daylight and celebratory sparse confetti. User explicitly wants LARGE flags, so put two large cropped flags in the TOP corners and two large cropped flags in the BOTTOM corners; each occupies a substantial corner, while the central 60 percent of image height stays entirely light ivory and free of objects for dark dynamic HTML title and 2x2 clock. Keep side center edges quiet too. No dark background, no columns, mic, podium, people, emblems, national designs, stripes, gender cues, writing, numbers, logos or watermarks. Polished festive raster background, not UI.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f520ff08-c403-4ff9-baf0-23892939d86b.png",
+          "original": "originals/evento-politico-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/evento-politico-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 933132,
+          "sha256": "25a2b4542e898ec7b511da0391c5c8bc9ec52be953165fc93d4a3c77b926bc82"
+        },
+        "mobileFull": {
+          "path": "art/evento-politico-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 970099,
+          "sha256": "ca027e2e9f6affd2634f4e7d3829a516575a63db65f142e68cd2b8edc5d0cfd9"
+        },
+        "mobile": {
+          "path": "art/evento-politico-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 270076,
+          "sha256": "aeeed17bef6e6de6cd25449ad172e0fafa7af3ffdcd5b98a97da73c943f4cae2"
+        },
+        "gallery": {
+          "path": "art/evento-politico-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 121848,
+          "sha256": "103440f5b16f3622843b880c642300aaf64b18eb21b28495a35ebb67323946b0"
+        },
+        "og": {
+          "path": "og/evento-politico.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 354106,
+          "sha256": "60b6e307359a36fda43e40b6cee2911392d922f6ac8b8de7342ac007fb112416",
+          "quality": 100
+        }
+      }
+    },
+    {
+      "slug": "zoeira",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
+      "originals": [
+        {
+          "path": "art/originals/zoeira-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1986511,
+          "sha256": "dc8f790d7c883550b5b6438d579c09dc16f0b140248faf2d2a9c058c3b01f6f3"
+        },
+        {
+          "path": "art/originals/zoeira-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 1827215,
+          "sha256": "89461aa25b3d48d9d57963db4539bf729041c168a2db69b8995e513a422509e3"
+        }
+      ],
+      "promptManifest": "art/zoeira-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Create a premium playful raster PNG background for a countdown website theme: harmless jokes and goofing around with friends (zoeira). Landscape 16:9 composition. Warm pale buttery cream textured paper with a very spacious empty central area (central 70 percent width and 65 percent height quiet and light for dark dynamic HTML title and countdown). Around the far outer corners only: tactile whimsical 3D googly eyes peeking from colorful clay blobs, a tiny rubber duck, curled party streamers, springy squiggles and sparse confetti in cobalt blue, tangerine, violet and sunny yellow. Funny, charming, irreverent and contemporary, premium detailed clay/paper still life with realistic soft shadows, suitable for all genders and adults as well as friends of all ages. Objects must stay at the border and corners leaving the center completely empty. No humans, no typography, no numbers, no letters, no logos, no watermark, no screenshot or UI.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-bee20805-ddce-43a4-b68c-8272fc8f7743.png",
+          "original": "originals/zoeira-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: supplied playful zoeira countdown artwork. Create a dedicated PORTRAIT 9:16 mobile composition, not a crop. Preserve the cream textured paper, colorful clay blobs with googly eyes, rubber duck with sunglasses, streamers, confetti, premium tactile 3D style. Recompose to the top and bottom OUTER corners, keep ALL objects outside the central 70 percent height and central 85 percent width. Broad empty uniformly pale cream center for dark dynamic HTML title and a 2x2 countdown. Playful for all genders. No text, numbers, letters, logo, signature or watermark anywhere. Artwork only.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-21af8d1f-0d41-4153-ac4b-aac13309ae23.png",
+          "original": "originals/zoeira-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/zoeira-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1173302,
+          "sha256": "86887e087f928493ae3bef7b6dd644982aa6c0f4e1a6df399d61cf216d8bdadb"
+        },
+        "mobileFull": {
+          "path": "art/zoeira-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1117637,
+          "sha256": "1d722aa9d33f6f0b964c9582cfd86bd564b87d73f01c444cf345c139cfe3577f"
+        },
+        "mobile": {
+          "path": "art/zoeira-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 311639,
+          "sha256": "66c00aa4930614451ccdfee21cc3eaf97461171c9f719508ba53e56057398987"
+        },
+        "gallery": {
+          "path": "art/zoeira-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 139543,
+          "sha256": "2a2ceb0e244ea912e15cb1c0fe59b2b2e197012472d466c0dce95bc9e070893e"
+        },
+        "og": {
+          "path": "og/zoeira.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 430619,
+          "sha256": "59ff91449733402cba1734d45904971209f1bbaa2e4dcbdba78014a8a19555e2",
+          "quality": 100
+        }
+      }
+    },
+    {
+      "slug": "encontro-amigos",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
+      "originals": [
+        {
+          "path": "art/originals/encontro-amigos-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2744389,
+          "sha256": "eec4f972003236cd0205583bf16c57abceccf3b562775db1e4e4031651af4cac"
+        },
+        {
+          "path": "art/originals/encontro-amigos-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2572675,
+          "sha256": "6b36258d88c7b75f0050e38f036d3f6222b78685f3130ef99d65a134cbe0b391"
+        }
+      ],
+      "promptManifest": "art/encontro-amigos-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Premium raster PNG countdown background, theme gathering of friends. Landscape 16:9. Warm light sand linen texture across entirely empty central 70 percent for dark HTML title/countdown. Outer corners only hold charming realistic still-life details of friendship: terracotta and teal ceramic coffee mugs, a small vintage instant camera, blank photo prints tucked at far edge, a woven picnic corner, subtle eucalyptus leaves and a few tiny warm string lights. Rich tactile paper/ceramic material, refined contemporary editorial photography/illustration, warmly convivial rather than childish. Objects only at corners and outer edges, center completely empty and uniformly light. All genders, no people, no alcohol emphasis, no text, numbers, letters, logos or watermarks. Artwork not UI.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-58b0d85a-579d-4102-a74e-02df2d223988.png",
+          "original": "originals/encontro-amigos-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: supplied friends gathering background. Create a dedicated portrait 9:16 PNG composition, not a crop. Preserve the reference palette, realistic tactile textures, lighting and object identity. Recompose all objects tightly to the outer top and bottom corners with very narrow side edges; central 85 percent width and 70 percent height must remain completely empty and uniformly light warm linen for dark HTML title and 2x2 countdown. No text, numbers, letters, logos, watermark, people or gender cues. Refined finished raster artwork only.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-d3078688-d3e0-494c-ad3b-e4c8b2752f51.png",
+          "original": "originals/encontro-amigos-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/encontro-amigos-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1434500,
+          "sha256": "a77a174401dbc29301edc0a586c8babaf5a9042b62f7ada34e95347454796e69"
+        },
+        "mobileFull": {
+          "path": "art/encontro-amigos-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1445515,
+          "sha256": "b0b7f3591d0593cdf0447770fcd629c97815020142bd644f2799e6e25bc1b60f"
+        },
+        "mobile": {
+          "path": "art/encontro-amigos-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 391335,
+          "sha256": "d58436ed9b9e6a68d6b9d42e815c8c216d0c706e6640c59c3047e28d4d37de35"
+        },
+        "gallery": {
+          "path": "art/encontro-amigos-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 174483,
+          "sha256": "51a2fd1c7e6518bc1e606629e10eaea4a244514a3243b6ede8c39faae73180a9"
+        },
+        "og": {
+          "path": "og/encontro-amigos.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 483760,
+          "sha256": "61144119c0c0f1818bc45291a201e5f654386a458390cf1ccbfa8438255ad466",
+          "quality": 80
+        }
+      }
+    },
+    {
+      "slug": "jantar",
+      "review": "Gender-inclusive occasion artwork; no people or embedded text. Original-generation visual review performed by the root agent.",
+      "originals": [
+        {
+          "path": "art/originals/jantar-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2256004,
+          "sha256": "df1d26d80fdf091ce11017cc3ae5ff709fe1f691b207be7d0364d6044bcb3d72"
+        },
+        {
+          "path": "art/originals/jantar-mobile.png",
+          "width": 940,
+          "height": 1672,
+          "bytes": 2217117,
+          "sha256": "9666db5c55b8e26c3ca6ab9c4cdf8423bdfe91121b4a4b59c36ec6a6f0e6da3b"
+        }
+      ],
+      "promptManifest": "art/jantar-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Premium raster PNG countdown background, theme dinner invitation. Landscape 16:9. Elegant deep forest green linen tablecloth with totally empty uniformly dark central 70 percent width and 65 percent height for light HTML title and countdown. Confine styled table details to far outer corners: partial ivory ceramic dinner plates, brushed brass cutlery, folded cream linen napkins, small candle with soft warm glow, rosemary sprigs and a discreet clear water glass. Intimate inviting restaurant-quality still life, realistic tactile materials, dramatic warm soft lighting, timeless refined editorial design. All genders, no people, no romantic couple symbols, no text, numbers, letters, logos or watermarks. Artwork only, no UI.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-22b44dc9-c31f-4628-abbb-39e6dd99789c.png",
+          "original": "originals/jantar-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: supplied dinner invitation background. Create a dedicated portrait 9:16 PNG composition, not a crop. Preserve the reference palette, realistic tactile textures, lighting and object identity. Recompose all objects tightly to the outer top and bottom corners with very narrow side edges; central 85 percent width and 70 percent height must remain completely empty and uniformly dark forest green linen for light HTML title and 2x2 countdown. No text, numbers, letters, logos, watermark, people or gender cues. Refined finished raster artwork only.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-aed15eec-a091-4bdb-ace4-122f00f1ebd5.png",
+          "original": "originals/jantar-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/jantar-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1334377,
+          "sha256": "27b9930044c09ed0518cb01a1d78f3a2d83fae818c7cc5f6a95aa02d89a56f20"
+        },
+        "mobileFull": {
+          "path": "art/jantar-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1317111,
+          "sha256": "001ed861dcf0613c6ec74c05693dc615467128012574f100b5670f2049bc7306"
+        },
+        "mobile": {
+          "path": "art/jantar-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 356020,
+          "sha256": "b64ef99d0f9fe9ef7e0707fa08c76f391c8f942660f45bc464a3e7579a5b538c"
+        },
+        "gallery": {
+          "path": "art/jantar-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 162742,
+          "sha256": "e18f5c26b4500e8bb560a32dd1be9d0d645a85bef2f3723872968a4fd5e40d5b"
+        },
+        "og": {
+          "path": "og/jantar.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 491430,
+          "sha256": "8ad97cacd5c2a1f66a83139d69deccc4caa3b3d19c2079f4d898b9a282e79ea5",
+          "quality": 100
         }
       }
     }

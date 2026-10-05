@@ -14,5 +14,9 @@ export const editorialAliases = {
   'evento-tecnologia': ['tech', 'TI', 'informática', 'programação', 'conferência de tecnologia'],
   'evento-medicina': ['saúde', 'congresso médico', 'simpósio de medicina', 'jornada médica'],
   'evento-direito': ['jurídico', 'advocacia', 'congresso jurídico', 'seminário de direito'],
-  festa: ['festa genérica', 'balada', 'comemoração'],
+  festa: ['festa genérica', 'balada', 'comemoração', 'carnaval'],
+  'evento-politico': ['política', 'posse', 'assumir cargo', 'cargo político', 'debate político', 'encontro político', 'convenção política', 'comício'],
+  zoeira: ['zueira', 'zoar', 'brincadeira', 'resenha', 'humor', 'fazer graça', 'piada', 'meme', 'amigos'],
+  'encontro-amigos': ['amigos', 'encontro com amigos', 'reunião de amigos', 'turma', 'rever amigos', 'reencontro'],
+  jantar: ['jantar especial', 'jantar entre amigos', 'jantar em família', 'jantar de confraternização', 'noite à mesa'],
 };

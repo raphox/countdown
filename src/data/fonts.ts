@@ -16,7 +16,7 @@ export const themeFonts:Record<string,FontName>={
   aniversario:'Fraunces','ano-novo':'Cinzel',natal:'Cormorant Garamond',familia:'Lora',empresa:'Inter',
   'formatura-fundamental':'Quicksand','formatura-ensino-medio':'DM Serif Display','formatura-faculdade':'Cinzel',
   casamento:'Cormorant Garamond',viagem:'Lora','cha-de-bebe':'Quicksand','evento-tecnologia':'Space Grotesk',
-  'evento-medicina':'Inter','evento-direito':'Libre Baskerville',festa:'Outfit',
+  'evento-medicina':'Inter','evento-direito':'Libre Baskerville',festa:'Outfit','evento-politico':'Libre Baskerville',zoeira:'Outfit','encontro-amigos':'Lora',jantar:'Cormorant Garamond',
 };
 export function fontFile(name:FontName):string{return `fonts/${fonts[name].slug}-latin.woff2`;}
 export function fontFamily(name:FontName):string{return `"${fonts[name].cssFamily}", ${name==='Inter'||name==='Quicksand'||name==='Space Grotesk'||name==='Outfit'?'system-ui, sans-serif':'Georgia, serif'}`;}

@@ -1,0 +1,7 @@
+---
+import ThemePage from '../[theme].astro';
+import {themes} from '../../data/themes';
+export function getStaticPaths(){return themes.map(theme=>({params:{theme:theme.slug},props:{theme}}));}
+const {theme}=Astro.props;
+---
+<ThemePage theme={theme} />

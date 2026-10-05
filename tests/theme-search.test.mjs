@@ -24,7 +24,7 @@ test('editorial matrix and every curated alias', () => {
     [['formatura'], ['formatura-fundamental', 'formatura-ensino-medio', 'formatura-faculdade']],
     [['medicina', 'congresso medico', 'SAÚDE'], ['evento-medicina']],
     [['juridico'], ['evento-direito']],
-    [['eventos'], ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa']],
+    [['eventos'], ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa', 'evento-politico']],
     [['', '  ', '---!?'], themes.map((theme) => theme.slug)],
     [['tema inexistente'], []],
     [['med', '.*[med](a)+$'], ['formatura-ensino-medio', 'evento-medicina']],
@@ -44,14 +44,14 @@ test('Unicode, punctuation and category names normalize consistently', () => {
     assert.deepEqual(find(query), find(normalizeSearch(query)));
   }
   assert.deepEqual(find('celebrações'), ['aniversario', 'ano-novo', 'natal', 'casamento', 'cha-de-bebe']);
-  assert.deepEqual(find('encontros e jornadas'), ['familia', 'empresa', 'viagem']);
+  assert.deepEqual(find('encontros e jornadas'), ['familia', 'empresa', 'viagem', 'zoeira', 'encontro-amigos', 'jantar']);
   assert.deepEqual(find('conquistas'), ['formatura-fundamental', 'formatura-ensino-medio', 'formatura-faculdade']);
   assert.deepEqual(find('evento medicina'), ['evento-medicina']);
   assert.deepEqual(find('tecnologia saúde'), []);
   assert.deepEqual(find('natalina ceia'), ['natal']);
   assert.deepEqual(find('ceia confraternização'), []);
   assert.deepEqual(find('evento-tecnologia'), ['evento-tecnologia']); // name tokens, not slug lookup
-  assert.deepEqual(find('familia'), ['familia']);
+  assert.deepEqual(find('familia'), ['familia', 'jantar']);
 });
 
 test('best rank, global stable ties, shared aliases, unique themes and isolated fields', () => {
@@ -72,3 +72,7 @@ test('best rank, global stable ties, shared aliases, unique themes and isolated 
 });
 
 test('partial words match any position with accent normalization and same-field isolation',()=>{assert.deepEqual(find('vers'),['aniversario','formatura-faculdade']);assert.deepEqual(find('tec'),['evento-tecnologia']);assert.deepEqual(find('mat'),['formatura-fundamental','formatura-ensino-medio','formatura-faculdade','casamento','evento-tecnologia']);assert.deepEqual(find('médi'),['formatura-ensino-medio','evento-medicina']);assert.deepEqual(find('lebra'),['aniversario','ano-novo','natal','casamento','cha-de-bebe']);assert.deepEqual(find('tura méd'),['formatura-ensino-medio']);assert.deepEqual(find('tec saúde'),[]);const ranked=createSearchIndex([{slug:'partial',name:'Festança',category:'x',aliases:[]},{slug:'whole',name:'Uma festa',category:'x',aliases:[]},{slug:'alias',name:'Outro',category:'x',aliases:['festa']},{slug:'exact',name:'Festa',category:'x',aliases:[]}],[]);assert.deepEqual(searchThemes(ranked,'festa'),['exact','alias','whole','partial']);});
+
+test('new themes match partial words and common spellings',()=>{for(const q of ['polít','posse','debate','comício'])assert.ok(find(q).includes('evento-politico'));for(const q of ['zoe','zuei','brinca','amigos'])assert.ok(find(q).includes('zoeira'));});
+
+test('carnaval maps to party and new social occasions have their own themes',()=>{assert.deepEqual(find('carnaval'),['festa']);assert.ok(find('jantar').includes('jantar'));assert.ok(find('amigos').includes('encontro-amigos'));});

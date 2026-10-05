@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Premium raster PNG countdown background, theme dinner invitation. Landscape 16:9. Elegant deep forest green linen tablecloth with totally empty uniformly dark central 70 percent width and 65 percent height for light HTML title and countdown. Confine styled table details to far outer corners: partial ivory ceramic dinner plates, brushed brass cutlery, folded cream linen napkins, small candle with soft warm glow, rosemary sprigs and a discreet clear water glass. Intimate inviting restaurant-quality still life, realistic tactile materials, dramatic warm soft lighting, timeless refined editorial design. All genders, no people, no romantic couple symbols, no text, numbers, letters, logos or watermarks. Artwork only, no UI.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-22b44dc9-c31f-4628-abbb-39e6dd99789c.png",
+    "original": "originals/jantar-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: supplied dinner invitation background. Create a dedicated portrait 9:16 PNG composition, not a crop. Preserve the reference palette, realistic tactile textures, lighting and object identity. Recompose all objects tightly to the outer top and bottom corners with very narrow side edges; central 85 percent width and 70 percent height must remain completely empty and uniformly dark forest green linen for light HTML title and 2x2 countdown. No text, numbers, letters, logos, watermark, people or gender cues. Refined finished raster artwork only.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-aed15eec-a091-4bdb-ace4-122f00f1ebd5.png",
+    "original": "originals/jantar-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

@@ -12,11 +12,14 @@
     "preview": "astro preview",
     "test": "node --test tests/*.test.mjs",
     "generate:art": "node scripts/generate-art.mjs",
-    "prebuild": "node scripts/sync-vendor.mjs"
+    "prebuild": "node scripts/sync-vendor.mjs",
+    "build:firebase": "SITE_URL=https://contagemregressiva-48055.web.app PUBLIC_SITE_ORIGIN=https://contagemregressiva-48055.web.app BASE_PATH=/ npm run build",
+    "deploy:firebase": "node scripts/deploy-firebase.mjs"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "astro": "^7.3.5",
+    "firebase-tools": "^15.32.1",
     "ical.js": "^2.2.1",
     "linkedom": "^0.18.13",
     "sharp": "^0.35.5",

@@ -11,3 +11,8 @@ dist/
 .astro/
 .env
 .env.local
+
+# Firebase local caches and CLI logs
+.firebase/
+firebase-debug*.log
+firepit-log.txt

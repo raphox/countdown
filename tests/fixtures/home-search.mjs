@@ -6,8 +6,8 @@ export function shippedIndex(home) {
   return JSON.parse(match[1]);
 }
 export function assertShippedIndex(home) {
-  const names = ['aniversario', 'ano novo', 'natal', 'encontro da familia', 'encontro da empresa', 'formatura do ensino fundamental', 'formatura do ensino medio', 'formatura da faculdade', 'casamento', 'viagem e ferias', 'cha de bebe', 'evento de tecnologia', 'evento de medicina e saude', 'evento de direito e juridico', 'festa generica'];
-  const categories = ['celebracoes', 'celebracoes', 'celebracoes', 'encontros e jornadas', 'encontros e jornadas', 'conquistas', 'conquistas', 'conquistas', 'celebracoes', 'encontros e jornadas', 'celebracoes', 'eventos', 'eventos', 'eventos', 'eventos'];
+  const names = ['aniversario', 'ano novo', 'natal', 'encontro da familia', 'encontro da empresa', 'formatura do ensino fundamental', 'formatura do ensino medio', 'formatura da faculdade', 'casamento', 'viagem e ferias', 'cha de bebe', 'evento de tecnologia', 'evento de medicina e saude', 'evento de direito e juridico', 'festa generica', 'evento politico', 'zoeira', 'encontro de amigos', 'jantar'];
+  const categories = ['celebracoes', 'celebracoes', 'celebracoes', 'encontros e jornadas', 'encontros e jornadas', 'conquistas', 'conquistas', 'conquistas', 'celebracoes', 'encontros e jornadas', 'celebracoes', 'eventos', 'eventos', 'eventos', 'eventos', 'eventos', 'encontros e jornadas', 'encontros e jornadas', 'encontros e jornadas'];
   const normalize = (text) => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
   const expected = Object.entries(editorialAliases).map(([slug, aliases], position) => {
     aliases = aliases.map(normalize);
@@ -41,7 +41,7 @@ export function createHomeDOM(home, initialValue = '') {
       const card = new Element(); card.dataset.themeSlug = match[1]; grid.append(card); cards.push(card);
     }
   }
-  assert.equal(cards.length, 15);
+  assert.equal(cards.length, 19);
   document.querySelector = (selector) => ids[selector.slice(1)] ?? null;
   document.querySelectorAll = (selector) => selector === '.category' ? groups : selector === '[data-theme-slug]' ? cards : [];
   return { document, ids, groups, cards, visibleResults: () => ids['search-results'].children.filter((card) => card.visible).map((card) => card.dataset.themeSlug) };

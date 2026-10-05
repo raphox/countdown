@@ -2,6 +2,14 @@
 
 Este registro distingue a implementação funcional dos aceites visual, externo e comercial. Não há deploy/push, contas, receita ou preview social de produção validado.
 
+## Atualização — mapa gratuito e ajustes de uso
+
+- Photon público ativado por padrão, sem cadastro/chave/backend: GeoJSON, cache em memória, intervalo entre buscas, timeout e recuperação de HTTP429. Busca real no Chrome encontrou resultados na Avenida Paulista; seleção/confirmacão e15 tiles do mapa carregados, sem403. Referrer restrito à origem nos tiles.
+- Local/mapa/direções agrupados em cartão; desktop850px e mobile390px conferidos sem overflow.
+- Modo Simples descarta campos avançados ao confirmar prévia/gerar, depois de validação bem-sucedida; erro mantém draft.
+- Clipboard real comparado com URL do evento no Chrome: iguais. Acrescentado fallback por seleção quando Clipboard API falha; fallback manual permanece.
+- Validação desta atualização:64/64 testes na raiz, build aprovado, check sem erros com2 hints de depreciação da API usada apenas no fallback de clipboard. Evidências anteriores em duas bases referem-se ao commit anterior.
+
 ## Evidências executadas
 
 - `npm run check`: sem erros, warnings ou hints.
@@ -27,7 +35,7 @@ Este registro distingue a implementação funcional dos aceites visual, externo 
 - **Browser/dispositivos:** o agente responsável registrou CUA real da composição final: Aniversário nas larguras 320/390/768/1440 sem overflow; relógio mobile2×2, fonte real41,73px a390; artcore contém apenas título/contador e todos os detalhes abaixo. Formatura Ensino Médio com título/data/status creme, labels sobre pills escuras; help do card calendário computed RGB74/81/73. Ano-Novo/Tecnologia/Festa também tiveram cores computed verificadas. Confete no body/fixed ocupa viewport, sem checkbox, respeitando movimento reduzido. Agrupamento de ações/calendário inspecionado no desktop/mobile. Busca vers com dois resultados e paca sem resultados/Ver todos com altura44px/radius8; servidor temporário com CSP script-src none confirmou HTML com quinze cartões e busca oculta; não foi desativado o JavaScript global do navegador. CUA anterior no prefixo /countdown/ confirmou busca tec, criador simples, geração da URL, FlipClock e caminhos corretos da fonte, PNG e vendor. Outros temas/textos máximos, zoom200%, teclado completo e falhas externas ainda exigem aceite específico. Teste DOM não comprova layout. Safari/iOS e Chrome/Android reais indisponíveis nesta etapa de implementação.
 - **Calendários externos:** Google web, Outlook pessoal/Microsoft365 e Apple Mac/iOS/Android precisam de importação real com ambiente/versão documentados. Atalhos permanecem desabilitados; ICS/instruções disponíveis.
 - **Q2/publicação:** domínio/base de produção e preview social real (fragmento/cache) pendentes. O host deve servir 404 real.
-- **Q5/mapas:** tiles públicos são demonstração. Provedor/limites/atribuição de produção e validação real do planejador pendentes; geocodificação desligada por padrão.
+- **Q5/mapas:** tiles públicos são demonstração. Provedor/limites/atribuição de produção e validação real do planejador pendentes; geocodificação Photon ativada nesta atualização, com uso moderado e sem garantia de disponibilidade.
 - **Q1/Q3/comercial:** rede/conta/formatos/elegibilidade, responsável/contato, mercados/privacidade/consentimento não definidos; ads desligados.
 - **Q4/negócio:** destino de métricas e metas não definidos; medição desligada. Mock/slot não comprova monetização.
 

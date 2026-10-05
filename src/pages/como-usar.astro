@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {localeFromPath} from '../i18n/index';
+import {sitePath,assetPath} from '../lib/paths';
+const en=localeFromPath(Astro.url.pathname)==='en-US';
+const copy=en?{
+ title:'Make the wait part of the experience.', eyebrow:'ONE DATE. SO MANY POSSIBILITIES.',
+ description:'Build anticipation with a themed countdown. Share it with friends, on your company’s LinkedIn, or display it on a TV at your event.',
+ lead:'A date tells people when. A countdown makes them look forward to it. Turn your next gathering, launch or celebration into a moment everyone can count down to.',
+ cta:'Create my countdown', note:'Free. No sign-up. Your title, date and favorite theme.',
+ heading:'Wherever your people are.', intro:'From the group chat to the big screen, give everyone a reason to get excited.',
+ cases:[
+ ['01','In the WhatsApp group','Give the conversation a date to look forward to.','Planning a dinner on Friday? Create “Dinner at our place”, copy the link and send it to the group with “The countdown is on. Who’s coming?”','jantar','Plan a dinner'],
+ ['02','With friends on Facebook','Turn “we should get together” into a plan.','Post a countdown to your birthday or reunion with “Save the date! We’re finally getting everyone together.” Add the link so friends can follow along.','encontro-amigos','Bring friends together'],
+ ['03','On your company’s LinkedIn','Give your next milestone a place in the feed.','Announcing a launch, webinar or company anniversary? Publish the countdown link with what’s coming and why your audience should be there.','empresa','Build anticipation'],
+ ['04','On the office TV','Make the next team moment visible.','Open the countdown in the browser on a connected TV or computer. Use the browser’s full-screen mode to count down to the team celebration, convention or annual gathering.','empresa','Get the team excited'],
+ ['05','On the event screen','Make the wait part of the show.','Before the doors open, the keynote begins or the celebration starts, display the live countdown on the venue’s TV, projector or LED screen through a connected computer.','festa','Set the scene'],
+ ['06','Anywhere a moment deserves attention','A small link. A shared sense of anticipation.','Add the link to an email invitation, your community chat or an internal announcement. From a trip with friends to a special dinner, let the countdown keep the date in sight.','viagem','Find your theme']
+ ],
+ how:'From an idea to a shared moment.', steps:[['Choose the mood','Pick a theme that matches your occasion.'],['Make it yours','Add a title and date. Use the complete form for a time, location or extra details.'],['Send it or display it','Generate the link and share it, or open it on the screen where people will see it.']],
+ tipTitle:'Taking it to the big screen?', tip:'Open the event link on the device connected to the screen, switch the browser to full-screen mode and keep the device awake. Check the internet connection, device clock and legibility from the audience’s viewing distance before the event.',
+ end:'The next “can’t wait” starts here.', endText:'Choose a theme, set the date and invite everyone into the countdown.'
+}:{
+ title:'Faça a espera virar parte do momento.', eyebrow:'UMA DATA. MUITAS POSSIBILIDADES.',
+ description:'Crie expectativa com um contador temático. Compartilhe com os amigos, no LinkedIn da empresa ou exiba na TV do seu evento.',
+ lead:'Uma data informa quando. Uma contagem dá vontade de chegar lá. Transforme o próximo encontro, lançamento ou comemoração em um momento que todo mundo pode esperar junto.',
+ cta:'Criar meu contador', note:'Grátis. Sem cadastro. Seu título, uma data e o tema que combina.',
+ heading:'Onde as suas pessoas estiverem.', intro:'Do grupo de mensagens ao telão, dê às pessoas um motivo para entrar no clima.',
+ cases:[
+ ['01','No grupo do WhatsApp','Dê à conversa uma data para esperar.','Vai ter jantar na sexta? Crie “Jantar lá em casa”, copie o link e mande no grupo com “A contagem começou. Quem vem?”','jantar','Marcar um jantar'],
+ ['02','Com os amigos no Facebook','Transforme o “vamos marcar” em um encontro.','Publique o contador do seu aniversário ou reencontro com “Reservem esse dia! Vamos reunir a turma.” Inclua o link para os amigos acompanharem.','encontro-amigos','Reunir os amigos'],
+ ['03','No LinkedIn da empresa','Dê espaço ao próximo marco da sua marca.','Vai anunciar um lançamento, webinar ou aniversário da empresa? Publique o link do contador junto com o que está por vir e por que seu público deve participar.','empresa','Criar expectativa'],
+ ['04','Na TV da empresa','Coloque o próximo encontro à vista de todos.','Abra o contador no navegador de uma TV conectada ou de um computador. Use a tela cheia do navegador para contar os dias até a confraternização, convenção ou encontro anual.','empresa','Animar a equipe'],
+ ['05','No painel do evento','Faça a espera participar da festa.','Antes de abrir as portas, começar a palestra ou iniciar a comemoração, exiba a contagem ao vivo na TV, no projetor ou no painel de LED do espaço, usando um computador conectado.','festa','Entrar no clima'],
+ ['06','Em qualquer lugar que mereça atenção','Um link pequeno. Uma expectativa compartilhada.','Inclua o link no convite por e-mail, no grupo da comunidade ou em um comunicado interno. Da viagem com amigos ao jantar especial, deixe a próxima data sempre por perto.','viagem','Encontrar meu tema']
+ ],
+ how:'Da ideia ao momento compartilhado.', steps:[['Escolha o clima','Encontre um tema que combine com a ocasião.'],['Dê o seu toque','Preencha título e data. Use o formulário completo para incluir horário, local ou outros detalhes.'],['Compartilhe ou exiba','Gere o link e envie para as pessoas ou abra na tela onde elas vão acompanhar.']],
+ tipTitle:'Vai levar para o telão?', tip:'Abra o link do evento no dispositivo conectado à tela, ative a tela cheia do navegador e mantenha o aparelho acordado. Antes do evento, confira a conexão, o relógio do dispositivo e a leitura dos números à distância do público.',
+ end:'O próximo “não vejo a hora” começa aqui.', endText:'Escolha um tema, marque a data e convide todo mundo para contar junto.'
+};
+---
+<BaseLayout title={en?'Ways to use':'Como usar'} description={copy.description} ogImage="og/encontro-amigos.png">
+ <div class="uses-page shell">
+  <section class="uses-hero">
+   <div><p class="eyebrow">{copy.eyebrow}</p><h1>{copy.title}</h1><p class="uses-lead">{copy.lead}</p><a class="primary-link" href={sitePath()}>{copy.cta}<span aria-hidden="true">↗</span></a><p class="uses-note">{copy.note}</p></div>
+   <div class="uses-art"><img src={assetPath('art/encontro-amigos-desktop.png')} alt="" width="1920" height="1080" /><div><span>{en?'GOOD COMPANY. GREAT MEMORIES.':'BOA COMPANHIA. BOAS MEMÓRIAS.'}</span><p>{en?'Can’t wait to see you.':'Não vejo a hora de te ver.'}</p></div></div>
+  </section>
+  <section aria-labelledby="uses-heading"><div class="uses-section-heading"><h2 id="uses-heading">{copy.heading}</h2><p>{copy.intro}</p></div><div class="uses-grid">{copy.cases.map(([number,title,benefit,example,theme,cta])=><article class="use-card"><span class="use-number" aria-hidden="true">{number}</span><h3>{title}</h3><p class="use-benefit">{benefit}</p><p>{example}</p><a href={sitePath(theme)}>{cta}<span aria-hidden="true">↗</span></a></article>)}</div></section>
+  <section class="uses-steps" aria-labelledby="steps-heading"><h2 id="steps-heading">{copy.how}</h2><ol>{copy.steps.map(([title,body])=><li><h3>{title}</h3><p>{body}</p></li>)}</ol><aside><h3>{copy.tipTitle}</h3><p>{copy.tip}</p></aside></section>
+  <section class="uses-final"><h2>{copy.end}</h2><p>{copy.endText}</p><a class="primary-link" href={sitePath()}>{copy.cta}<span aria-hidden="true">↗</span></a></section>
+ </div>
+</BaseLayout>

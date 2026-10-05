@@ -1,3 +1,4 @@
+import {currentLocale,type Locale} from '../i18n/index';
 export function validTimeZone(zone: string): boolean { try { new Intl.DateTimeFormat('en', { timeZone: zone }).format(); return zone.length <= 64; } catch { return false; } }
 export function localParts(ms: number, zone: string): string {
   const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {timeZone:zone, year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(ms).map(x=>[x.type,x.value]));
@@ -14,4 +15,4 @@ export function localToUTC(local: string, zone: string): string {
   return new Date(matches[0]!).toISOString();
 }
 export function canonicalInstant(value: unknown): value is string { if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:00\.000Z$/.test(value))return false; const ms=Date.parse(value);return Number.isFinite(ms)&&new Date(ms).toISOString()===value&&+value.slice(0,4)>=2000&&+value.slice(0,4)<=2100; }
-export function formatEventDate(instant:string,zone:string):string { return new Intl.DateTimeFormat('pt-BR',{timeZone:zone,dateStyle:'full',timeStyle:'short'}).format(new Date(instant)); }
+export function formatEventDate(instant:string,zone:string,locale:Locale=currentLocale()):string { return new Intl.DateTimeFormat(locale,{timeZone:zone,dateStyle:'full',timeStyle:'short'}).format(new Date(instant)); }
