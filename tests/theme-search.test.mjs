@@ -2,20 +2,22 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import ts from 'typescript';
+import { moduleTS } from './fixtures/load-ts.mjs';
 import { editorialAliases } from './fixtures/editorial-aliases.mjs';
 async function loadTypeScript(path) {
   const source = await readFile(new URL(path, import.meta.url), 'utf8');
   const { outputText } = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } });
   return import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 }
-const { themes, categories } = await loadTypeScript('../src/data/themes.ts');
+const { themes, categories } = await moduleTS('src/data/themes.ts');
 const { createSearchIndex, normalizeSearch, searchThemes } = await loadTypeScript('../src/lib/theme-search.ts');
 const index = createSearchIndex(themes, categories);
 const find = (query) => searchThemes(index, query);
 
 test('editorial matrix and every curated alias', () => {
   const matrix = [
-    [['Aniversário', 'ANIVERSARIO', 'aniversario', 'niver'], ['aniversario']],
+    [['Aniversário', 'ANIVERSARIO', 'aniversario'], ['aniversario']],
+    [['niver'], ['aniversario', 'formatura-faculdade']],
     [['réveillon', 'REVEILLON', '  ano-novo  ', 'ano novo'], ['ano-novo']],
     [['reunião de família', 'REUNIAO DE FAMILIA'], ['familia']],
     [['colação de grau', 'colacao de grau'], ['formatura-faculdade']],
@@ -24,7 +26,8 @@ test('editorial matrix and every curated alias', () => {
     [['juridico'], ['evento-direito']],
     [['eventos'], ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa']],
     [['', '  ', '---!?'], themes.map((theme) => theme.slug)],
-    [['tema inexistente', 'med', '.*[med](a)+$'], []],
+    [['tema inexistente'], []],
+    [['med', '.*[med](a)+$'], ['formatura-ensino-medio', 'evento-medicina']],
   ];
   for (const [queries, expected] of matrix) for (const query of queries) assert.deepEqual(find(query), expected, query);
   assert.deepEqual(Object.fromEntries(themes.map((theme) => [theme.slug, [...theme.aliases]])), editorialAliases);
@@ -62,8 +65,10 @@ test('best rank, global stable ties, shared aliases, unique themes and isolated 
   assert.deepEqual(searchThemes(fixtures, 'duplicado'), ['tokens', 'alias', 'exact']);
   assert.deepEqual(searchThemes(fixtures, 'verde azul'), []);
   assert.deepEqual(searchThemes(fixtures, 'outra eventos'), []);
-  assert.deepEqual(searchThemes(fixtures, 'ocasi'), []);
+  assert.deepEqual(searchThemes(fixtures, 'ocasi'), ['split']);
   assert.deepEqual(searchThemes(fixtures, ''), ['tokens', 'alias', 'exact', 'split']);
   const hidden = createSearchIndex([{ slug: 'segredo', name: 'Nome', category: 'x', aliases: [] }], [{ id: 'x', name: 'Categoria' }]);
   assert.deepEqual(searchThemes(hidden, 'segredo'), []);
 });
+
+test('partial words match any position with accent normalization and same-field isolation',()=>{assert.deepEqual(find('vers'),['aniversario','formatura-faculdade']);assert.deepEqual(find('tec'),['evento-tecnologia']);assert.deepEqual(find('mat'),['formatura-fundamental','formatura-ensino-medio','formatura-faculdade','casamento','evento-tecnologia']);assert.deepEqual(find('médi'),['formatura-ensino-medio','evento-medicina']);assert.deepEqual(find('lebra'),['aniversario','ano-novo','natal','casamento','cha-de-bebe']);assert.deepEqual(find('tura méd'),['formatura-ensino-medio']);assert.deepEqual(find('tec saúde'),[]);const ranked=createSearchIndex([{slug:'partial',name:'Festança',category:'x',aliases:[]},{slug:'whole',name:'Uma festa',category:'x',aliases:[]},{slug:'alias',name:'Outro',category:'x',aliases:['festa']},{slug:'exact',name:'Festa',category:'x',aliases:[]}],[]);assert.deepEqual(searchThemes(ranked,'festa'),['exact','alias','whole','partial']);});

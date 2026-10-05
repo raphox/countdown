@@ -1,0 +1,17 @@
+{
+  "confetti": {
+    "package": "canvas-confetti",
+    "version": "1.9.4",
+    "artifact": "dist/confetti.browser.js",
+    "source": "https://github.com/catdad/canvas-confetti",
+    "license": "ISC",
+    "sha256": "49f4bcbc56e7ceb5c3d25d13db1d0da965b6cd1c8a54a707bb055be0685b0a95"
+  },
+  "flipclock": {
+    "package": "flipclock",
+    "version": "1.0.1",
+    "source": "https://github.com/objectivehtml/FlipClock",
+    "license": "MIT",
+    "integration": "Bundled official npm ESM API and CSS; manual absolute-time renderer"
+  }
+}

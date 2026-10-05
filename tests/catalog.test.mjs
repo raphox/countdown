@@ -50,14 +50,14 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
   const homeResponse = await fetch(`${origin}${base}`);
   assert.equal(homeResponse.status, 200);
   const home = await homeResponse.text();
-  assert.match(home, /<html lang="pt-BR">/);
-  assert.match(home, /<main id="conteudo">/);
+  assert.match(home, /<html lang="pt-BR"/);
+  assert.match(home, /<main id="conteudo" tabindex="-1">/);
   assert.ok(home.includes(`<link rel="canonical" href="${site}${base}"`));
   assert.equal([...home.matchAll(/data-theme-slug="/g)].length, 15);
   assert.match(home, /id="theme-search"[^>]*hidden/);
   assert.match(home, /id="theme-search-index"[^>]*type="application\/json"/);
   const executable = [...home.matchAll(/<script([^>]*)>/g)].map((match) => match[1]).filter((attrs) => !attrs.includes('application/json'));
-  assert.equal(executable.length, 1);
+  assert.ok(executable.length >= 1);
   assert.ok(executable.every((attrs) => attrs.includes('type="module"') && (!attrs.includes('src=') || attrs.includes(`src="${base}_astro/`))));
 
   assertShippedIndex(home);
@@ -75,7 +75,13 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
     assert.ok(page.includes(`<h1 id="theme-title">${name}`), slug);
     assert.ok(page.includes(`href="${base}"`), `return link missing: ${slug}`);
     assert.match(page, /fuso horário/);
-    assert.doesNotMatch(page, /<script\b/i);
+    assert.match(page, /id="event-app"/);
+    assert.match(page, /id="event-form"/);
+    assert.match(page, /id="event-view"[^>]*hidden/);
+    assert.match(page, /<noscript>/);
+    assert.ok(page.includes(`content="${site}${base}og/${slug}.png"`));
+    assert.equal((await fetch(`${origin}${base}og/${slug}.png`)).status, 200);
+    for (const variant of ['desktop','mobile','gallery']) assert.equal((await fetch(`${origin}${base}art/${slug}-${variant}.png`)).status, 200);
   }
 
   const assets = [...home.matchAll(/(?:href|src)="(\/_astro\/[^"]+|\/countdown\/_astro\/[^"]+)"/g)].map((match) => match[1]);

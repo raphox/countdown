@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Família: welcoming warm terracotta, sage and sand illustration. At the very bottom edge a lovingly arranged simple communal wooden table with ceramic cups, shared bread and linen; delicate leafy plants around side corners. No people or family-role stereotypes. Spacious warm sand backdrop, sense of belonging for every family. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-cd8f26bf-a55c-4bd5-87d4-0239ca4fa839.png",
+    "original": "originals/familia-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: attached Familia desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose table to very bottom and foliage to outer corners, not a crop; broad quiet center and safe side margins. Família: welcoming warm terracotta, sage and sand illustration. At the very bottom edge a lovingly arranged simple communal wooden table with ceramic cups, shared bread and linen; delicate leafy plants around side corners. No people or family-role stereotypes. Spacious warm sand backdrop, sense of belonging for every family. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-32dc2b9b-3546-4d37-a82a-616f388a79c2.png",
+    "original": "originals/familia-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

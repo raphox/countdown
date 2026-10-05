@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Evento de tecnologia: sophisticated deep midnight-blue atmosphere with cyan/violet luminous circuitry, fine network connections and dimensional translucent nodes confined to far outer edges. Rich depth, restrained neon glow, calm dark central space, polished professional editorial art, no robots or people. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f55f12bd-337d-41ec-bc2b-9116ece8050e.png",
+    "original": "originals/evento-tecnologia-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: attached technology desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose nodes/circuitry to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Evento de tecnologia: sophisticated deep midnight-blue atmosphere with cyan/violet luminous circuitry, fine network connections and dimensional translucent nodes confined to far outer edges. Rich depth, restrained neon glow, calm dark central space, polished professional editorial art, no robots or people. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-0690cc42-e15a-459a-840e-32c154497285.png",
+    "original": "originals/evento-tecnologia-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

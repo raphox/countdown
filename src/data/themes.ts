@@ -1,3 +1,4 @@
+import {themeFonts,type FontName} from './fonts';
 export const categories = [
   { id: 'celebracoes', name: 'Celebrações', description: 'Datas para reunir pessoas queridas.' },
   { id: 'conquistas', name: 'Conquistas', description: 'Etapas que merecem ser lembradas.' },
@@ -14,10 +15,11 @@ export type Theme = {
   description: string;
   colors: { background: string; accent: string; soft: string };
   ending: { message: string; confetti: boolean };
+  font?: FontName;
   assets?: { gallery?: string; desktop?: string; mobile?: string; og?: string };
 };
 
-export const themes = [
+const themeDefinitions = [
   { slug: 'aniversario', name: 'Aniversário', category: 'celebracoes', aliases: ["niver", "festa de aniversário", "festa de anos"], description: 'Uma data para celebrar mais um ano de vida.', colors: { background: '#f6d7cf', accent: '#a43f46', soft: '#ead8ee' }, ending: { message: 'Parabéns! Chegou o grande dia!', confetti: true } },
   { slug: 'ano-novo', name: 'Ano-Novo', category: 'celebracoes', aliases: ["réveillon", "virada do ano", "fim de ano"], description: 'A expectativa pela virada e por um novo começo.', colors: { background: '#172b49', accent: '#dfbd70', soft: '#385071' }, ending: { message: 'Feliz Ano-Novo!', confetti: true } },
   { slug: 'natal', name: 'Natal', category: 'celebracoes', aliases: ["ceia natalina", "festa de natal", "confraternização natalina"], description: 'O encontro e as tradições do fim de ano.', colors: { background: '#e9e1d1', accent: '#8c3544', soft: '#9fae9a' }, ending: { message: 'Feliz Natal!', confetti: true } },
@@ -34,6 +36,8 @@ export const themes = [
   { slug: 'evento-direito', name: 'Evento de direito e jurídico', category: 'eventos', aliases: ["jurídico", "advocacia", "congresso jurídico", "seminário de direito"], description: 'Debates e encontros sobre direito e justiça.', colors: { background: '#e6e1d7', accent: '#47494d', soft: '#c4ad86' }, ending: { message: 'Nosso evento começa agora.', confetti: false } },
   { slug: 'festa', name: 'Festa genérica', category: 'eventos', aliases: ["festa genérica", "balada", "comemoração"], description: 'Um espaço para celebrar do seu jeito.', colors: { background: '#eee1ec', accent: '#764a83', soft: '#e4ae9a' }, ending: { message: 'A festa vai começar!', confetti: true } },
 ] as const satisfies readonly Theme[];
+
+export const themes = themeDefinitions.map(theme => ({ ...theme, assets: { gallery: `art/${theme.slug}-gallery.png`, desktop: `art/${theme.slug}-desktop.png`, mobile: `art/${theme.slug}-mobile.png`, og: `og/${theme.slug}.png` }, font: themeFonts[theme.slug]! }));
 
 export function getTheme(slug: string): Theme | undefined {
   return themes.find((theme) => theme.slug === slug);

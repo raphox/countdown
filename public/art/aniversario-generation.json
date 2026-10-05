@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "variant": "desktop",
+      "prompt": "Use case: stylized-concept. Asset type: original final PNG desktop background for a polished Brazilian themed countdown website, Aniversário. Create a high-quality landscape 16:9 raster illustration, ideally 1920x1080. Tactile editorial art with painted paper textures, dimensional balloons and beautifully lit layered cut-paper decorations; sophisticated joyful composition, rich subtle detail, soft shadows, not flat SVG-like geometry. Coral, warm cream and lilac palette. Asymmetric balloon clusters and paper ribbons around the outer edges and corners. Keep the central 60 percent quiet, pale and almost empty for HTML title, date, countdown and buttons; generous safe margins, decorations never cross the central reading area. No people, no photographs, no third-party brands. Absolutely no text, numbers, logos, watermarks or UI drawn into the image. Opaque background. Produce one finished landscape image, not a montage.",
+      "original": "originals/aniversario-desktop.png",
+      "generator": "OpenAI built-in image_gen"
+    },
+    {
+      "variant": "mobile",
+      "prompt": "Use case: compositing. Edit target: the attached finished birthday illustration. Produce its final portrait 9:16 mobile PNG version, ideally 1080x1920. Keep the same premium tactile editorial painted-paper style, coral/cream/lilac palette and dimensional balloons/ribbons. RECOMPOSE for portrait rather than cropping the landscape: move clusters mainly to top and bottom outer corners, keeping the middle 65 percent pale, quiet and empty for a long HTML event title, date and a 2x2 countdown. Preserve generous side margins and rich materials/soft shadows. No text, numbers, logos, watermark, people or UI. One full finished portrait opaque background.",
+      "original": "originals/aniversario-mobile.png",
+      "generator": "OpenAI built-in image_gen"
+    }
+  ],
+  "review": "Approved for gender-inclusive occasions: no people, gender symbols or exclusive gender roles; occasion-only balloons and ribbons."
+}

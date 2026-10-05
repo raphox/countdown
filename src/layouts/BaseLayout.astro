@@ -1,22 +1,34 @@
 ---
 import '../styles/global.css';
-import { sitePath } from '../lib/paths';
+import {fontFace,fontFamily,type FontName} from '../data/fonts';
+import { sitePath, assetPath } from '../lib/paths';
 
 interface Props {
   title: string;
   description: string;
+  ogImage?: string;
+  ogAlt?: string;
+  headingFont?: FontName;
 }
-const { title, description } = Astro.props;
+const { title, description, ogImage, ogAlt, headingFont='Fraunces' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" style={`--heading-font:${fontFamily(headingFont)}`}>
   <head>
     <meta charset="UTF-8" />
+    <style is:inline set:html={fontFace('Inter', import.meta.env.BASE_URL)} />
+    <style id="theme-font-face" is:inline set:html={headingFont==='Inter'?'':fontFace(headingFont, import.meta.env.BASE_URL)} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f6f3ed" />
     <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={`${title} | Contagem`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <><meta property="og:image" content={new URL(assetPath(ogImage), Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={ogAlt ?? title} /></>}
+    <meta name="referrer" content="no-referrer" />
     <title>{title} | Contagem</title>
   </head>
   <body>
@@ -27,9 +39,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         <nav aria-label="Navegação principal"><a href={sitePath()}>Explorar temas <span aria-hidden="true">↗</span></a></nav>
       </div>
     </header>
-    <main id="conteudo"><slot /></main>
+    <main id="conteudo" tabindex="-1"><slot /></main>
     <footer class="site-footer">
-      <div class="shell footer-inner"><span>contagem<span class="brand-dot">.</span></span><p>Um lugar para escolher a ocasião. Os contadores personalizados chegam nas próximas etapas.</p><a href={sitePath()}>Voltar ao catálogo ↑</a></div>
+      <div class="shell footer-inner"><span>contagem<span class="brand-dot">.</span></span><p>Crie seu contador e compartilhe o próximo momento. Sem cadastro.</p><a href={sitePath()}>Voltar ao catálogo ↑</a><a href={sitePath('privacidade')}>Privacidade e serviços</a></div>
     </footer>
   </body>
 </html>
+<script>
+ import {initSkipLink} from '../lib/skip-link';
+ initSkipLink();
+</script>

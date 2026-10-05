@@ -1,0 +1,1117 @@
+{
+  "version": 2,
+  "date": "2026-10-05",
+  "generator": "OpenAI built-in image_gen",
+  "artFormat": "PNG raster",
+  "rights": {
+    "origin": "Generated original artwork for Contagem using built-in OpenAI image_gen; no third-party reference art supplied.",
+    "license": "No third-party artist license is asserted. Use is subject to applicable OpenAI terms and operator obligations."
+  },
+  "requirements": {
+    "inclusive": true,
+    "noPeople": true,
+    "noEmbeddedText": true,
+    "dynamicContent": "HTML only"
+  },
+  "exports": {
+    "tool": "sharp",
+    "version": "0.35.5",
+    "compression": "PNG palette quality100, Floyd-Steinberg dither0.75, effort10, zlib9; no text overlays",
+    "servedMobile": "540x960 responsive PNG, <=600000 bytes; full 1080x1920 export and original preserved but not loaded automatically"
+  },
+  "themes": [
+    {
+      "slug": "aniversario",
+      "originals": [
+        {
+          "path": "art/originals/aniversario-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2186957,
+          "sha256": "d5e8cb5ba924b6c0e734f76c73126b6fced11369e57d7f1028848f0bb21d0551"
+        },
+        {
+          "path": "art/originals/aniversario-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2201011,
+          "sha256": "b90f0b7923beb96e4cf1f80889dbb0b1085e3e1ed55e07170d452e5d9a0ed3c8"
+        }
+      ],
+      "promptManifest": "art/aniversario-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Asset type: original final PNG desktop background for a polished Brazilian themed countdown website, Aniversário. Create a high-quality landscape 16:9 raster illustration, ideally 1920x1080. Tactile editorial art with painted paper textures, dimensional balloons and beautifully lit layered cut-paper decorations; sophisticated joyful composition, rich subtle detail, soft shadows, not flat SVG-like geometry. Coral, warm cream and lilac palette. Asymmetric balloon clusters and paper ribbons around the outer edges and corners. Keep the central 60 percent quiet, pale and almost empty for HTML title, date, countdown and buttons; generous safe margins, decorations never cross the central reading area. No people, no photographs, no third-party brands. Absolutely no text, numbers, logos, watermarks or UI drawn into the image. Opaque background. Produce one finished landscape image, not a montage.",
+          "original": "originals/aniversario-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: the attached finished birthday illustration. Produce its final portrait 9:16 mobile PNG version, ideally 1080x1920. Keep the same premium tactile editorial painted-paper style, coral/cream/lilac palette and dimensional balloons/ribbons. RECOMPOSE for portrait rather than cropping the landscape: move clusters mainly to top and bottom outer corners, keeping the middle 65 percent pale, quiet and empty for a long HTML event title, date and a 2x2 countdown. Preserve generous side margins and rich materials/soft shadows. No text, numbers, logos, watermark, people or UI. One full finished portrait opaque background.",
+          "original": "originals/aniversario-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/aniversario-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1090717,
+          "sha256": "e8f8e2d197b75291f08342657f17e1b1ee28584cb86be6b08178d9b7506a6322"
+        },
+        "mobileFull": {
+          "path": "art/aniversario-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1137915,
+          "sha256": "5503f7b906d67dfbacb4d8fc024d3a7cc4e0847fe3f36768067c1a5ef9bdee4c"
+        },
+        "mobile": {
+          "path": "art/aniversario-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 323377,
+          "sha256": "ec79a0f40c6128dd771b0d1cc8bfcf49052382d7ea2ecc569d3931cd993ba208"
+        },
+        "gallery": {
+          "path": "art/aniversario-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 141192,
+          "sha256": "0ee5493bf49fbafe2c8cbdf13c4458ea4d779fa8dbe743a346bba78b9180150b"
+        },
+        "og": {
+          "path": "og/aniversario.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 416075,
+          "sha256": "4d2135cb883c904a1b14806ebe82f528cdaeb97617072bd322bc4f5d01498710"
+        }
+      }
+    },
+    {
+      "slug": "ano-novo",
+      "originals": [
+        {
+          "path": "art/originals/ano-novo-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2197160,
+          "sha256": "6ff9e0959e4c399aab9e859758c5c68aab08ae8731bc367ea37c3a4304e9dae7"
+        },
+        {
+          "path": "art/originals/ano-novo-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2207040,
+          "sha256": "beab1012cbc302cefae7c06d32dc648f830919657a7b3420b563ce26147ab3c8"
+        }
+      ],
+      "promptManifest": "art/ano-novo-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Asset: final desktop PNG, landscape 16:9, ideally 1920x1080. Ano-Novo: a sophisticated deep midnight-blue night sky with finely painted golden fireworks confined to the far outer corners, delicate luminous golden dust along the perimeter, restrained celebratory glow. Midnight blue, champagne gold and subtle indigo. No balloons, no florals. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage. Asymmetrical framing at outer edges, broad clean center.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-5eaa927d-4454-4e03-9810-f1e4be09eb0c.png",
+          "original": "originals/ano-novo-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: the just-generated Ano-Novo desktop illustration. Make a dedicated portrait 9:16 mobile PNG, ideally 1080x1920, matching its identity and palette. Recompose fireworks toward top and bottom corners rather than cropping the landscape; maintain a broad dark quiet center and comfortable side margins for long HTML content and a 2x2 countdown. Ano-Novo: a sophisticated deep midnight-blue night sky with finely painted golden fireworks confined to the far outer corners, delicate luminous golden dust along the perimeter, restrained celebratory glow. Midnight blue, champagne gold and subtle indigo. No balloons, no florals. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-ab0f2ca6-9fc5-4050-90cc-e1b373d8242b.png",
+          "original": "originals/ano-novo-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/ano-novo-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1103652,
+          "sha256": "c3f64c8ca72a91bdd7524e1147965986d0b8f914be3928b846354d78224e7c9c"
+        },
+        "mobileFull": {
+          "path": "art/ano-novo-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1182176,
+          "sha256": "55e8c5ab51171bbbe7ff2c54b00e4cb9bf811f2eea06309e0d2045d165f19f07"
+        },
+        "mobile": {
+          "path": "art/ano-novo-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 345731,
+          "sha256": "03a42d0fcf7fd183c3fcbb6f0288e0be748219835bbe77dd24f35cc3cf6ff8d7"
+        },
+        "gallery": {
+          "path": "art/ano-novo-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 149504,
+          "sha256": "52d8d4c48fea09b3fc5072967a52b32770da648f68c05d083ec61c80e8985a9c"
+        },
+        "og": {
+          "path": "og/ano-novo.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 430126,
+          "sha256": "8c75ce5623e6f60c09aab823caea312cf2ee48bcff62445e7345c812cac06a71"
+        }
+      }
+    },
+    {
+      "slug": "natal",
+      "originals": [
+        {
+          "path": "art/originals/natal-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2434570,
+          "sha256": "24f6c65f098c47a15a21ac04e5060dfe3f4ad4b839275bc12927bf48dd79757b"
+        },
+        {
+          "path": "art/originals/natal-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2344302,
+          "sha256": "4e9feaf5e5dcd042262194fdd1515d515f09a9b7895e8ab32a088a92bef827b4"
+        }
+      ],
+      "promptManifest": "art/natal-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Natal: warm illuminated pine branches, natural pine cones, delicate champagne ornaments and tiny amber fairy lights around outer edges. Wine red, deep evergreen and warm cream palette; refined festive painted-paper craftsmanship, broad light cream center. No Santa characters or gender-coded gifts. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage. Asymmetric perimeter framing.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-d5bfc87e-fc10-4aea-80ba-48ee6a6e6350.png",
+          "original": "originals/natal-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached Natal desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose decorations to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Natal: warm illuminated pine branches, natural pine cones, delicate champagne ornaments and tiny amber fairy lights around outer edges. Wine red, deep evergreen and warm cream palette; refined festive painted-paper craftsmanship, broad light cream center. No Santa characters or gender-coded gifts. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-6a99db94-aea0-428e-a38e-caa006250273.png",
+          "original": "originals/natal-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/natal-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1085069,
+          "sha256": "f2d4d2b9ac24ab04bc0fefad1c8bbf14cccdb1aaa6db34cc180d1a92178c7d7d"
+        },
+        "mobileFull": {
+          "path": "art/natal-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1100163,
+          "sha256": "58d11274b76db125f715c55427f2d0ea647cd58f6cbff35133df1bb8d692b566"
+        },
+        "mobile": {
+          "path": "art/natal-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 325648,
+          "sha256": "abb57f55fa7a1ce01126ea8a8ce17bcc9f4c212e22cb8c5c5891a6e2f3f86396"
+        },
+        "gallery": {
+          "path": "art/natal-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 153274,
+          "sha256": "d091d34a81afeb1d5cc26696e8653f0544348f62e6c69653f744399c6beab5c4"
+        },
+        "og": {
+          "path": "og/natal.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 428211,
+          "sha256": "74da5f4b120f7a0fbf4745cf3d30eceeafbbd2d0d2fc37e79c24774853e5beb6"
+        }
+      }
+    },
+    {
+      "slug": "familia",
+      "originals": [
+        {
+          "path": "art/originals/familia-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2091303,
+          "sha256": "e0528ef5e2a34e29e51d8a78ea853082b61843b9c059fa082707ea422ab43a87"
+        },
+        {
+          "path": "art/originals/familia-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2044669,
+          "sha256": "12838f6f18933aa79c31d5a9769a1c74a0935ceaab2391d14ace254481e7b41b"
+        }
+      ],
+      "promptManifest": "art/familia-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Família: welcoming warm terracotta, sage and sand illustration. At the very bottom edge a lovingly arranged simple communal wooden table with ceramic cups, shared bread and linen; delicate leafy plants around side corners. No people or family-role stereotypes. Spacious warm sand backdrop, sense of belonging for every family. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-cd8f26bf-a55c-4bd5-87d4-0239ca4fa839.png",
+          "original": "originals/familia-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached Familia desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose table to very bottom and foliage to outer corners, not a crop; broad quiet center and safe side margins. Família: welcoming warm terracotta, sage and sand illustration. At the very bottom edge a lovingly arranged simple communal wooden table with ceramic cups, shared bread and linen; delicate leafy plants around side corners. No people or family-role stereotypes. Spacious warm sand backdrop, sense of belonging for every family. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-32dc2b9b-3546-4d37-a82a-616f388a79c2.png",
+          "original": "originals/familia-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/familia-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 954807,
+          "sha256": "a0d671e971066ce43c657739afc3201257ed18d553f0cb4b667f55df614660e7"
+        },
+        "mobileFull": {
+          "path": "art/familia-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 988116,
+          "sha256": "37b11f64e3f708f893ce1b1b5aef94d1e493f8fb3539c9f5b3c7c0654411bac6"
+        },
+        "mobile": {
+          "path": "art/familia-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 304750,
+          "sha256": "bd58e4084e3cf22cea59df89420789c70f86f196b1d12d0d032bbc5605e21569"
+        },
+        "gallery": {
+          "path": "art/familia-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 139174,
+          "sha256": "118a4e202ec5c99a91374012c2eb6315829d6fd4d115a11d94374b2ff50e2adc"
+        },
+        "og": {
+          "path": "og/familia.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 384240,
+          "sha256": "54ec043ff894c80dfbd63409ef0897fa22de4bdc2592000378f5e2a41ccf0196"
+        }
+      }
+    },
+    {
+      "slug": "empresa",
+      "originals": [
+        {
+          "path": "art/originals/empresa-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1842834,
+          "sha256": "385a712f634188083c6e90b2d076544b3cf41e24b86e5d69845b7d9025bbe4e7"
+        },
+        {
+          "path": "art/originals/empresa-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 1549216,
+          "sha256": "b7fcc83fe153e72d0038d1cdb1cf19ed337ee9cfb9bef65161134030bac29918"
+        }
+      ],
+      "promptManifest": "art/empresa-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Empresa: refined architectural composition of layered dimensional panels, translucent glass arcs and subtle brushed-metal planes at outer edges. Petroleum blue, slate, white and restrained silver. Sophisticated professional visual rhythm and collaboration, clean pale blue-white central backdrop, no party decorations. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-671070b3-d744-4767-97a8-08148acb363b.png",
+          "original": "originals/empresa-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached Empresa desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Empresa: refined architectural composition of layered dimensional panels, translucent glass arcs and subtle brushed-metal planes at outer edges. Petroleum blue, slate, white and restrained silver. Sophisticated professional visual rhythm and collaboration, clean pale blue-white central backdrop, no party decorations. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-d8ca3ac5-c68a-4dbd-b56e-7b0e7d090562.png",
+          "original": "originals/empresa-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/empresa-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 777107,
+          "sha256": "63c09a90889f4b9c85c6e4d31358fb35085d4a77a17ac87179c1810617e3cf49"
+        },
+        "mobileFull": {
+          "path": "art/empresa-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 753291,
+          "sha256": "41ed42b3ebce2b7e0ebabf32d76b303aa0f81835f87f255a35a22a92cb51b36d"
+        },
+        "mobile": {
+          "path": "art/empresa-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 216422,
+          "sha256": "eb62897d3f28dd2be68185dd0260e2f14e96113a5233fa67069aeb0ec8658080"
+        },
+        "gallery": {
+          "path": "art/empresa-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 98573,
+          "sha256": "b75a3f9d02e61d4bca4ac0fbe8fd49cc6b7f9fbe3e3323726f36f9b19cfec848"
+        },
+        "og": {
+          "path": "og/empresa.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 293243,
+          "sha256": "d5cbb8f81f23372c00b684632b0edaec84534dcf1cda48a36fb01f616a44b507"
+        }
+      }
+    },
+    {
+      "slug": "formatura-fundamental",
+      "originals": [
+        {
+          "path": "art/originals/formatura-fundamental-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2166002,
+          "sha256": "612c1f1d27b263d1618d6adb097d139d1ba6b4ddaba32c711cc0bb9f6d76b9f6"
+        },
+        {
+          "path": "art/originals/formatura-fundamental-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2154626,
+          "sha256": "2a441071a3ecbd2865f58388c963bbeced7c52bb9407ead60bd608569c1179d1"
+        }
+      ],
+      "promptManifest": "art/formatura-fundamental-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Formatura do ensino fundamental: joyful tactile paper craft, open books with blank pages, little folded paper airplanes and dimensional stars confined to perimeter. Sky blue, coral and sunny yellow on warm cream. Celebrate learning and new beginnings with playful age-appropriate objects for children of any gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f8066669-6c21-4c06-ab1a-68111c92d36f.png",
+          "original": "originals/formatura-fundamental-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached fundamental graduation desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Formatura do ensino fundamental: joyful tactile paper craft, open books with blank pages, little folded paper airplanes and dimensional stars confined to perimeter. Sky blue, coral and sunny yellow on warm cream. Celebrate learning and new beginnings with playful age-appropriate objects for children of any gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-cff6736f-b17b-4191-93d0-26f9c7658c1d.png",
+          "original": "originals/formatura-fundamental-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/formatura-fundamental-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 980259,
+          "sha256": "d3e80e2e7184d989838d296348faa4fdf95f0522dadb3fdad475e1433443d5bd"
+        },
+        "mobileFull": {
+          "path": "art/formatura-fundamental-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1021268,
+          "sha256": "7da0fe90ae43395e540783a66e822a59678dbb52bfd416b7b8ffe3589abb93f5"
+        },
+        "mobile": {
+          "path": "art/formatura-fundamental-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 288846,
+          "sha256": "58b9d2bc841f3711401a305b03eba2950f8b1180ff56513b7c9c9af7abb36e82"
+        },
+        "gallery": {
+          "path": "art/formatura-fundamental-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 125370,
+          "sha256": "7bb9964e099d1d9987e3287639cd50f90f47098b4ad2a096612d842d4820a16d"
+        },
+        "og": {
+          "path": "og/formatura-fundamental.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 372509,
+          "sha256": "9c132fe5c5490f7286107f168608470f70081bfab617672a6d6d5dbbf1d9e7f8"
+        }
+      }
+    },
+    {
+      "slug": "formatura-ensino-medio",
+      "originals": [
+        {
+          "path": "art/originals/formatura-ensino-medio-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2312563,
+          "sha256": "9471c297f6468d746a03e94aee6b0d5bdd683852ed65b9273ac8fc034d315f2a"
+        },
+        {
+          "path": "art/originals/formatura-ensino-medio-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2228028,
+          "sha256": "8313af4f49b7aa9f89f1e3a92a22497825bdb9e48865d1e3f9482bcca4bd968d"
+        }
+      ],
+      "promptManifest": "art/formatura-ensino-medio-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Formatura do ensino médio: energetic violet and golden-yellow composition, rolled blank diploma with flowing dimensional ribbons, ascending small stars and restrained celebratory paper trails around corners. Premium textured deep purple backdrop with quiet center, youthful achievement for every gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-c3086d37-e9ae-454e-90eb-1a80e73c924b.png",
+          "original": "originals/formatura-ensino-medio-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached high school graduation desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Formatura do ensino médio: energetic violet and golden-yellow composition, rolled blank diploma with flowing dimensional ribbons, ascending small stars and restrained celebratory paper trails around corners. Premium textured deep purple backdrop with quiet center, youthful achievement for every gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-34c5aadc-4278-45e0-9af4-f4f2ce0a040e.png",
+          "original": "originals/formatura-ensino-medio-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/formatura-ensino-medio-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1019455,
+          "sha256": "bb9284c69694c53871eb33ed7c94f75542aad4562e3b105fbc529e44ef7c1a8a"
+        },
+        "mobileFull": {
+          "path": "art/formatura-ensino-medio-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1087889,
+          "sha256": "8f954da1c2a0573251d8c19999146137c04398f965a17a60681759d2b42d26a1"
+        },
+        "mobile": {
+          "path": "art/formatura-ensino-medio-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 325317,
+          "sha256": "95d28e4472a607a5c87478f4d3995aef72b215326e4726289782bb3a59c2e28e"
+        },
+        "gallery": {
+          "path": "art/formatura-ensino-medio-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 143315,
+          "sha256": "dbe0c2fd942622510470ccfcfc8d85d88cc9b31bcc17b5499a19aa83fbd4b2bb"
+        },
+        "og": {
+          "path": "og/formatura-ensino-medio.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 410248,
+          "sha256": "067f3c855fcf7e8a4d0a198f8229ad204d6159b153e353f38e6a85ec4d3ce229"
+        }
+      }
+    },
+    {
+      "slug": "formatura-faculdade",
+      "originals": [
+        {
+          "path": "art/originals/formatura-faculdade-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2460032,
+          "sha256": "01a78aa66f734994de46ddecf06752c17ceaaa14de0620fe6266c6fddefefeb5"
+        },
+        {
+          "path": "art/originals/formatura-faculdade-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2323433,
+          "sha256": "bcadaa52bc70e03726e3bff870f178dec3461b25614407c0bb0ba04ff628bd58"
+        }
+      ],
+      "promptManifest": "art/formatura-faculdade-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Formatura de faculdade: solemn academic achievement, single black mortarboard with bronze tassel, blank rolled ivory diploma and subtle bronze laurel branches around outer corners. Black charcoal, warm cream and bronze, exquisite tactile paper and restrained metallic finish. Broad quiet cream center, gender-inclusive objects only. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-bc1d19e3-7ce9-4633-983b-d3bbded27d3d.png",
+          "original": "originals/formatura-faculdade-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached college graduation desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Formatura de faculdade: solemn academic achievement, single black mortarboard with bronze tassel, blank rolled ivory diploma and subtle bronze laurel branches around outer corners. Black charcoal, warm cream and bronze, exquisite tactile paper and restrained metallic finish. Broad quiet cream center, gender-inclusive objects only. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-2f15cc1b-d1e4-44e7-b586-9436fa00e22e.png",
+          "original": "originals/formatura-faculdade-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/formatura-faculdade-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1271844,
+          "sha256": "28cee10894aeac2f2832340527b2cda3e2eb20929b440cc4a45df0e77bd4492e"
+        },
+        "mobileFull": {
+          "path": "art/formatura-faculdade-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1321188,
+          "sha256": "c220b56042014ea5e956b3adbac3c11604d31d4d10cef266c66d633e72d8105b"
+        },
+        "mobile": {
+          "path": "art/formatura-faculdade-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 366483,
+          "sha256": "672d8fc06bba750673cd99e983b3222a5faec0b652c7caa5d94d8304f63cc288"
+        },
+        "gallery": {
+          "path": "art/formatura-faculdade-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 159295,
+          "sha256": "3894b80351caf0ffc645dca34b239e0b23282ebd916a684cc9bdcb1ea8fbd90c"
+        },
+        "og": {
+          "path": "og/formatura-faculdade.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 480872,
+          "sha256": "212a4ba5af8e8d7d4a89f123e4707e794c06a86c680cc3d5b0c8497f81314b4b"
+        }
+      }
+    },
+    {
+      "slug": "casamento",
+      "originals": [
+        {
+          "path": "art/originals/casamento-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2542521,
+          "sha256": "e6b92b421af6479d239cb67d384f8352485fd14d195e4e6269a921d88e49170c"
+        },
+        {
+          "path": "art/originals/casamento-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2457202,
+          "sha256": "6b95a370a05e1d13b007cdc9ba645e8163f922848eca106ef5bfa907d1afd41f"
+        }
+      ],
+      "promptManifest": "art/casamento-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Casamento: exquisite delicate botanical frame of sage leaves, cream blossoms and intertwined champagne silk ribbons around outer corners. Off-white handmade paper center, subtle golden light and tactile botanical detail. Celebrate any couple equally; no bride/groom figures, gender symbols or gender-role accessories. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-730e8740-1a4d-49c8-80be-aac579d857a3.png",
+          "original": "originals/casamento-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached wedding desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose decorations to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Casamento: exquisite delicate botanical frame of sage leaves, cream blossoms and intertwined champagne silk ribbons around outer corners. Off-white handmade paper center, subtle golden light and tactile botanical detail. Celebrate any couple equally; no bride/groom figures, gender symbols or gender-role accessories. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-d3d3414c-8b2e-4a7b-a113-62b2c52b5e05.png",
+          "original": "originals/casamento-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/casamento-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1293710,
+          "sha256": "e5587be3e3e7e6f589e1fba7b0b6011eb57351e49add9a96ca099289e895ea74"
+        },
+        "mobileFull": {
+          "path": "art/casamento-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1358247,
+          "sha256": "84e45198178490e0fb14b44b2c3a3b8a5f0032d3befc901feac0fa40d4b12457"
+        },
+        "mobile": {
+          "path": "art/casamento-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 379859,
+          "sha256": "e5983be11d52f93fd4251731ae38afe7c61233dcfc6f07ebbb415fdde0960d45"
+        },
+        "gallery": {
+          "path": "art/casamento-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 168445,
+          "sha256": "e94c9c8e7bc5732a1b562479a4198f7440e7de9b5f230c2fc2d166c7c7f26b30"
+        },
+        "og": {
+          "path": "og/casamento.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 494151,
+          "sha256": "9de4abb5734197024512657e25ab0d20c4e5ca5f45b7201c25b845b4f102d3ff"
+        }
+      }
+    },
+    {
+      "slug": "viagem",
+      "originals": [
+        {
+          "path": "art/originals/viagem-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2792975,
+          "sha256": "97e17509c326923cb38dfc0e42530e8feea61df5270176ec74cd764658bc7184"
+        },
+        {
+          "path": "art/originals/viagem-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2751281,
+          "sha256": "a63f5f554012c32a63be556d3f760219a276a3de30f740272bc6e39d0759d921"
+        }
+      ],
+      "promptManifest": "art/viagem-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Viagem: beautifully painted dimensional travel still life at outer corners, small textured tangerine suitcase, blank luggage tag, folded abstract map without labels and curving ocean-blue route ribbon. Ocean blue, sand and tangerine, airy sandy center, discovery and adventure for everyone. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-631e0ee6-176d-4c38-bc41-7ec4fa4a514a.png",
+          "original": "originals/viagem-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached travel desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Viagem: beautifully painted dimensional travel still life at outer corners, small textured tangerine suitcase, blank luggage tag, folded abstract map without labels and curving ocean-blue route ribbon. Ocean blue, sand and tangerine, airy sandy center, discovery and adventure for everyone. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-7b3fb4c3-f3a4-4a45-aa77-e6772c7dc86b.png",
+          "original": "originals/viagem-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/viagem-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1161750,
+          "sha256": "1d4a9605c9df4d932eec6a4bea9d0c239dae9034ce3b28edbb3a9621fc6c8e13"
+        },
+        "mobileFull": {
+          "path": "art/viagem-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1186471,
+          "sha256": "28327cd5117aa7c085a1acf40c1597ce8c6cbda112045d1153c88a0405fa80c9"
+        },
+        "mobile": {
+          "path": "art/viagem-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 343781,
+          "sha256": "e7a771367072839b25703404be2f1d5f66c442aa7af2828ff85b376b55911270"
+        },
+        "gallery": {
+          "path": "art/viagem-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 157763,
+          "sha256": "e2ac0f2ae74061f32bcb37d7c4bfc0720a9ff5d9db00dc287db7b11cd06992b0"
+        },
+        "og": {
+          "path": "og/viagem.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 450791,
+          "sha256": "4a384a1db548abf8b6caf77162ff426cd88ff8efcb6027be0f5dbf7bb1b0884b"
+        }
+      }
+    },
+    {
+      "slug": "cha-de-bebe",
+      "originals": [
+        {
+          "path": "art/originals/cha-de-bebe-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2175892,
+          "sha256": "4b7f74faf8aea4546ecffe603514f0d3e1f162769c3840800187ba16ebd09fe9"
+        },
+        {
+          "path": "art/originals/cha-de-bebe-mobile.png",
+          "width": 940,
+          "height": 1672,
+          "bytes": 1827516,
+          "sha256": "7d9fa06940d36f270b2000c84282602c43f86de8347ef792bd63e935fc295d0a"
+        }
+      ],
+      "promptManifest": "art/cha-de-bebe-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Chá de bebê: gentle welcoming dreamscape of soft dimensional clouds, tiny warm golden stars and subtle crescent moon around perimeter. Cream, pastel sage green and muted lilac together, textured soft fabric and paper. Entirely gender-inclusive, no pink-vs-blue coding, no gender reveal objects, no dolls or gendered clothing. Broad quiet cream center. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-3a743e76-5d5d-4802-99ce-5475e327ae48.png",
+          "original": "originals/cha-de-bebe-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached baby shower desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose clouds/stars to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Chá de bebê: gentle welcoming dreamscape of soft dimensional clouds, tiny warm golden stars and subtle crescent moon around perimeter. Cream, pastel sage green and muted lilac together, textured soft fabric and paper. Entirely gender-inclusive, no pink-vs-blue coding, no gender reveal objects, no dolls or gendered clothing. Broad quiet cream center. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-e8103c4a-06c6-47f6-b4a8-a733a00e0dce.png",
+          "original": "originals/cha-de-bebe-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/cha-de-bebe-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1055238,
+          "sha256": "69c796bf8120fd4732dc2f9079fa78f8d2e449c16f128f11736d5032af10fee0"
+        },
+        "mobileFull": {
+          "path": "art/cha-de-bebe-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 996761,
+          "sha256": "07be51599562dccb0e6017ca2f3c1874ffebee9c6cd76a4222baf2b875ce714f"
+        },
+        "mobile": {
+          "path": "art/cha-de-bebe-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 285942,
+          "sha256": "8382744ee28d4f9a9d824cce904fcd205573711c5d3fa710017577edbfa756c8"
+        },
+        "gallery": {
+          "path": "art/cha-de-bebe-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 141522,
+          "sha256": "12da952d299bf41e82bafb04467ddb1c46d73b6b1f5e6449f35dfe201d3e8159"
+        },
+        "og": {
+          "path": "og/cha-de-bebe.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 419581,
+          "sha256": "ffd043a718f06201b14ce105a5dab5cb86d4362b04438fef576a2c5dc0a0ce5d"
+        }
+      }
+    },
+    {
+      "slug": "evento-tecnologia",
+      "originals": [
+        {
+          "path": "art/originals/evento-tecnologia-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1963762,
+          "sha256": "21713d3665caee86418ba26218ec9afc409c865e6d2443059886349c1a962ff6"
+        },
+        {
+          "path": "art/originals/evento-tecnologia-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 1800370,
+          "sha256": "68b15b22c92319403e4bf360d39a50bf5ecf5500b0e74b7b47ef3be552aa1c34"
+        }
+      ],
+      "promptManifest": "art/evento-tecnologia-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Evento de tecnologia: sophisticated deep midnight-blue atmosphere with cyan/violet luminous circuitry, fine network connections and dimensional translucent nodes confined to far outer edges. Rich depth, restrained neon glow, calm dark central space, polished professional editorial art, no robots or people. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f55f12bd-337d-41ec-bc2b-9116ece8050e.png",
+          "original": "originals/evento-tecnologia-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached technology desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose nodes/circuitry to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Evento de tecnologia: sophisticated deep midnight-blue atmosphere with cyan/violet luminous circuitry, fine network connections and dimensional translucent nodes confined to far outer edges. Rich depth, restrained neon glow, calm dark central space, polished professional editorial art, no robots or people. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-0690cc42-e15a-459a-840e-32c154497285.png",
+          "original": "originals/evento-tecnologia-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/evento-tecnologia-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 967777,
+          "sha256": "c9a8f779065c05042bff303841f69bff6e02c59b6a79cb9cdfe62c2a7593ff57"
+        },
+        "mobileFull": {
+          "path": "art/evento-tecnologia-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 954345,
+          "sha256": "098cf6801a793b2bfbb7d307a39a0d3615f5b9122bba9957c1933e4957361431"
+        },
+        "mobile": {
+          "path": "art/evento-tecnologia-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 291370,
+          "sha256": "cf665a69bde5d798394217e689b4ef7943a242a6f04db75eb21414389af23017"
+        },
+        "gallery": {
+          "path": "art/evento-tecnologia-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 143514,
+          "sha256": "2834bbc33756ed77e8063f6e79988840d88c1d2a72b3e2f12b9dd04104f61ba6"
+        },
+        "og": {
+          "path": "og/evento-tecnologia.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 398322,
+          "sha256": "cb23bfae27a7aed3a87dc04390318792ea372da8b2d5c056e3cdad9e37b5153d"
+        }
+      }
+    },
+    {
+      "slug": "evento-medicina",
+      "originals": [
+        {
+          "path": "art/originals/evento-medicina-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2209474,
+          "sha256": "c2e40c979940ae93db3f46c75c26b1dfe890eaa445afa4f609263bb5d912cfad"
+        },
+        {
+          "path": "art/originals/evento-medicina-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 1969724,
+          "sha256": "a21a23778de273c6bd1938648415b4bb65c80d735c61c92b7a48ffdfc0ac9351"
+        }
+      ],
+      "promptManifest": "art/evento-medicina-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Evento de medicina: refined abstract organic waves in translucent mint glass and textured white paper, gentle connected nodes resembling scientific collaboration at outer edges. Petroleum green, mint and white; professional humane calm, broad pale white-mint center. No doctors, uniforms, medical crosses, gender roles or clinical graphic imagery. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-3ba044c3-032d-4483-b204-5648e4806c80.png",
+          "original": "originals/evento-medicina-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached medicine desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Evento de medicina: refined abstract organic waves in translucent mint glass and textured white paper, gentle connected nodes resembling scientific collaboration at outer edges. Petroleum green, mint and white; professional humane calm, broad pale white-mint center. No doctors, uniforms, medical crosses, gender roles or clinical graphic imagery. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-bfefa8c9-8bff-44f9-b478-ab9beb06da00.png",
+          "original": "originals/evento-medicina-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/evento-medicina-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1166937,
+          "sha256": "74c4d0fe5764e0912ffab9ab1d55005622b6f6df216fe6d27f8b6555713beb7b"
+        },
+        "mobileFull": {
+          "path": "art/evento-medicina-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1229476,
+          "sha256": "de9d139e2ee9e7c2be968362a607902adf4cc80021e3370284afe3fa676e3b4a"
+        },
+        "mobile": {
+          "path": "art/evento-medicina-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 345001,
+          "sha256": "25997ccab13da5b6970cfbaeb645548adfea96dd13f223a7244387f82744bed9"
+        },
+        "gallery": {
+          "path": "art/evento-medicina-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 149489,
+          "sha256": "fd5a42875b654d337a4ddb6b5429cab8ca80f2c6c61db57737aaab39e43acf7d"
+        },
+        "og": {
+          "path": "og/evento-medicina.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 441501,
+          "sha256": "92a2f73e89b0d0d84809062a29e126bf855ba8f6b94a4ce68212c7218effde43"
+        }
+      }
+    },
+    {
+      "slug": "evento-direito",
+      "originals": [
+        {
+          "path": "art/originals/evento-direito-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2034425,
+          "sha256": "62030b9884920be69fa14429ac020bc961730e0b7c9807f4115a956b58b20479"
+        },
+        {
+          "path": "art/originals/evento-direito-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 2118249,
+          "sha256": "f34756ab3152fe86be29da357052420619ae887f2588c3d55778efd066f731eb"
+        }
+      ],
+      "promptManifest": "art/evento-direito-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Evento de direito: restrained sculptural classical columns along outer corners, abstract balanced bronze geometric forms, charcoal graphite and ivory stone with tactile paper and brushed bronze details. Sophisticated editorial justice/institutional atmosphere with a broad quiet ivory center. No Lady Justice or human figures, no gender-coded imagery. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-65b37cd1-5d9f-47b6-9ae1-2cdc6acb228c.png",
+          "original": "originals/evento-direito-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached law desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Evento de direito: restrained sculptural classical columns along outer corners, abstract balanced bronze geometric forms, charcoal graphite and ivory stone with tactile paper and brushed bronze details. Sophisticated editorial justice/institutional atmosphere with a broad quiet ivory center. No Lady Justice or human figures, no gender-coded imagery. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-8aa3335e-c779-47aa-861a-a5e2d96ada14.png",
+          "original": "originals/evento-direito-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/evento-direito-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1116855,
+          "sha256": "be0a01cace338b16cc2337b479832300de526cc1d1d818ef3ea6f3addd7204ab"
+        },
+        "mobileFull": {
+          "path": "art/evento-direito-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 1376855,
+          "sha256": "37863e63c0757c3f338ff9985b03d5195c01515b6d3bc94de3914029fe980408"
+        },
+        "mobile": {
+          "path": "art/evento-direito-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 373769,
+          "sha256": "04485f3fdc1283273637fb6d9e160735cc576cefa8df00fa6ea79869e8e1f8f5"
+        },
+        "gallery": {
+          "path": "art/evento-direito-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 143900,
+          "sha256": "33712545c882b8a6ea5fa8876639d110ddf41ff49594dd20bcb28cdd3f6023f1"
+        },
+        "og": {
+          "path": "og/evento-direito.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 426134,
+          "sha256": "493e0350477f7d36866e23abe2d4b7f694e746e7650be89c62da5110d92a42b9"
+        }
+      }
+    },
+    {
+      "slug": "festa",
+      "originals": [
+        {
+          "path": "art/originals/festa-desktop.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2104101,
+          "sha256": "78a3f179f043f38516145c7292861c30837347c18230de48bfe6cd5ec557cbb0"
+        },
+        {
+          "path": "art/originals/festa-mobile.png",
+          "width": 941,
+          "height": 1672,
+          "bytes": 1930280,
+          "sha256": "b9a693caee35a8643748ae234f759ebb38f48d20d244d4530cd83d9001cddfcf"
+        }
+      ],
+      "promptManifest": "art/festa-generation.json",
+      "prompts": [
+        {
+          "variant": "desktop",
+          "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Festa: vibrant sophisticated dimensional ribbons, tiny dancing light trails, floating folded rhythmic paper forms and soft festive glow at far perimeter. Violet, coral and sunny yellow on calm deep violet center. General celebration for everyone, no birthday balloons/cake, no holiday symbols, no people or gendered accessories. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-4fa72894-fe5f-4a9f-abbd-15caeafa9074.png",
+          "original": "originals/festa-desktop.png",
+          "generator": "OpenAI built-in image_gen"
+        },
+        {
+          "variant": "mobile",
+          "prompt": "Use case: compositing. Edit target: attached party desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose decorations to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Festa: vibrant sophisticated dimensional ribbons, tiny dancing light trails, floating folded rhythmic paper forms and soft festive glow at far perimeter. Violet, coral and sunny yellow on calm deep violet center. General celebration for everyone, no birthday balloons/cake, no holiday symbols, no people or gendered accessories. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+          "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-843b245a-f380-45e3-8b94-7aaab8355d56.png",
+          "original": "originals/festa-mobile.png",
+          "generator": "OpenAI built-in image_gen"
+        }
+      ],
+      "outputs": {
+        "desktop": {
+          "path": "art/festa-desktop.png",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 774223,
+          "sha256": "9005c0d5e9ff5a9de98a11b42f17d287309d2ae95c46968e9b681137626dc3eb"
+        },
+        "mobileFull": {
+          "path": "art/festa-mobile-full.png",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 756440,
+          "sha256": "da517457b5294341523de2862ccc409ddf0d82bd5b7680118ca09fe65b8e93ea"
+        },
+        "mobile": {
+          "path": "art/festa-mobile.png",
+          "width": 540,
+          "height": 960,
+          "bytes": 224408,
+          "sha256": "107b870a567f1cfd8fc58aa72f6e462f8c07d60ff6a7a508d75a990b0a8f85fd"
+        },
+        "gallery": {
+          "path": "art/festa-gallery.png",
+          "width": 640,
+          "height": 360,
+          "bytes": 112068,
+          "sha256": "b4816e819de51abaa417926a2c6c8b9810006e63ea8fac12f1f1d3e11520ea25"
+        },
+        "og": {
+          "path": "og/festa.png",
+          "width": 1200,
+          "height": 630,
+          "bytes": 304316,
+          "sha256": "f1304b7a90e13ab3d0b0f91da6b041c49458e712974ac20ee0ecd553a94f43dc"
+        }
+      }
+    }
+  ]
+}

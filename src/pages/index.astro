@@ -1,16 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ThemeCard from '../components/ThemeCard.astro';
+import AdSlot from '../components/AdSlot.astro';
 import { categories, themes } from '../data/themes';
+import {assetPath} from '../lib/paths';
 import { createSearchIndex } from '../lib/theme-search';
 const searchIndex = createSearchIndex(themes, categories);
 ---
-<BaseLayout title="Escolha uma ocasião" description="Explore quinze temas para futuras contagens regressivas de celebrações, conquistas, encontros e eventos.">
+<BaseLayout title="Escolha uma ocasião" description="Crie contagens regressivas com quinze temas de celebrações, conquistas, encontros e eventos.">
   <section class="hero shell" aria-labelledby="hero-title">
     <div class="hero-copy"><p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> MOMENTOS QUE MERECEM SER CONTADOS</p><h1 id="hero-title">Cada ocasião tem <em>seu tempo.</em></h1><p class="hero-lead">Encontre um tema para o próximo momento especial. Nossa coleção reúne celebrações, conquistas, encontros e eventos em um só lugar.</p><a class="primary-link" href="#temas">Explorar os 15 temas <span aria-hidden="true">↘</span></a></div>
-    <div class="hero-visual" aria-hidden="true"><span class="hero-visual-ring ring-one"></span><span class="hero-visual-ring ring-two"></span><span class="hero-visual-sun"></span><span class="hero-visual-center">o tempo<br />de celebrar<span>✳</span></span><span class="hero-visual-caption">UM NOVO MOMENTO SE APROXIMA ·</span></div>
+    <div class="hero-visual"><div class="hero-art-frame"><img src={assetPath('og/aniversario.png')} alt="" width="1200" height="630" fetchpriority="high" /><div class="hero-art-caption"><span>PARA OS DIAS QUE IMPORTAM</span><p>O melhor ainda<br />está por vir.</p></div></div><div class="hero-accent-card"><img src={assetPath('art/casamento-gallery.png')} alt="" width="640" height="360" /><p>Todo encontro<br />merece um começo.</p></div><div class="collection-stamp"><strong>15</strong><span>ocasiões para<br />contar histórias</span></div></div>
   </section>
-  <section id="temas" class="catalog shell" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">A COLEÇÃO</p><h2 id="catalog-title">Uma ocasião para cada história.</h2></div><p>Escolha entre 15 temas para conhecer a proposta de cada página.</p></div>
+  <section id="temas" class="catalog shell" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">A COLEÇÃO</p><h2 id="catalog-title">Uma ocasião para cada história.</h2></div><p>Escolha o clima do seu próximo encontro. O resto é com você.</p></div>
     <div id="theme-search" class="theme-search" hidden>
       <label for="theme-query">Buscar tema</label>
       <div class="search-controls"><input id="theme-query" type="search" placeholder="Aniversário, formatura, tecnologia…" autocomplete="off" /><button id="clear-search" type="button">Limpar</button></div>
@@ -21,7 +23,8 @@ const searchIndex = createSearchIndex(themes, categories);
     <div id="search-results" class="card-grid search-results" hidden></div>
     {categories.map((category) => { const entries = themes.filter((theme) => theme.category === category.id); return <section class="category" aria-labelledby={`cat-${category.id}`}><div class="category-heading"><div><span class="category-index">0{categories.indexOf(category) + 1} / 04</span><h3 id={`cat-${category.id}`}>{category.name}</h3></div><p>{category.description}</p></div><div class="card-grid">{entries.map((theme) => <ThemeCard theme={theme} number={themes.indexOf(theme) + 1} />)}</div></section>; })}
   </section>
-  <section class="info-band"><div class="shell info-inner"><span aria-hidden="true" class="info-symbol">✳</span><div><p class="eyebrow">EM CONSTRUÇÃO</p><h2>Por enquanto, explore os temas.</h2><p>As páginas já podem ser abertas e compartilhadas como referência. Criar um evento, escolher data e fuso horário e acompanhar a contagem exigirão JavaScript e serão adicionados nas próximas etapas.</p></div></div></section>
+  <section class="info-band"><div class="shell info-inner"><span aria-hidden="true" class="info-symbol">✳</span><div><p class="eyebrow">SEU PRÓXIMO MOMENTO</p><h2>Crie, confira e compartilhe.</h2><p>Escolha um tema, preencha data e fuso horário e confira a prévia. O link leva os dados completos, sem cadastro. Qualquer pessoa pode duplicar uma cópia; o original continua igual. Criar e acompanhar a contagem exige JavaScript.</p></div></div></section>
+<AdSlot />
 </BaseLayout>
 
 <script>

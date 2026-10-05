@@ -5,11 +5,14 @@ import { resolve } from 'node:path';
 import { runInNewContext } from 'node:vm';
 import { assertShippedIndex, createHomeDOM } from './fixtures/home-search.mjs';
 const home = await readFile(resolve('dist/index.html'), 'utf8');
-const module = [...home.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].find((match) => match[1].includes('type="module"'));
-assert.ok(module, 'compiled home module');
-let code = module[2];
-const src = module[1].match(/src="([^"]+)"/);
-if (src) code = await readFile(resolve('dist', src[1].slice(src[1].indexOf('_astro/'))), 'utf8');
+let code;
+for (const match of home.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {
+  if (!match[1].includes('type="module"')) continue;
+  let candidate=match[2]; const src=match[1].match(/src="([^"]+)"/);
+  if(src)candidate=await readFile(resolve('dist',src[1].slice(src[1].indexOf('_astro/'))),'utf8');
+  if(candidate.includes('#theme-query')){code=candidate;break;}
+}
+assert.ok(code,'compiled search module');
 
 for (const initial of ['', 'formatura']) test(`shipped UI initializes restored value ${JSON.stringify(initial)} and handles events locally`, () => {
   assertShippedIndex(home);
@@ -36,7 +39,12 @@ for (const initial of ['', 'formatura']) test(`shipped UI initializes restored v
   query('festa', ['aniversario', 'natal', 'casamento', 'festa']);
   query('confraternização', ['empresa', 'natal']);
   query('eventos', ['evento-tecnologia', 'evento-medicina', 'evento-direito', 'festa']);
-  query('niver', ['aniversario']);
+  query('niver', ['aniversario', 'formatura-faculdade']);
+  query('vers', ['aniversario', 'formatura-faculdade']);
+  query('tec', ['evento-tecnologia']);
+  query('mat', ['formatura-fundamental', 'formatura-ensino-medio', 'formatura-faculdade', 'casamento', 'evento-tecnologia']);
+  query('médi', ['formatura-ensino-medio', 'evento-medicina']);
+  query('lebra', ['aniversario', 'ano-novo', 'natal', 'casamento', 'cha-de-bebe']);
   query('tema inexistente', []);
   assert.equal(input.value, 'tema inexistente');
   assert.equal(ids['search-empty'].hidden, false);

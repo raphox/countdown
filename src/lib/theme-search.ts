@@ -20,8 +20,9 @@ export function searchThemes(index: readonly SearchEntry[], query: string): stri
   const tokens = normalized.split(' ');
   return index.map((entry) => ({ entry, rank: !normalized || entry.name === normalized ? 0
     : entry.aliases.includes(normalized) ? 1
-    : entry.fields.some((field) => tokens.every((token) => field.includes(token))) ? 2 : 3 }))
-    .filter(({ rank }) => rank < 3)
+    : entry.fields.some((field) => tokens.every((token) => field.includes(token))) ? 2
+    : entry.fields.some((field) => tokens.every((token) => field.some((word) => word.includes(token)))) ? 3 : 4 }))
+    .filter(({ rank }) => rank < 4)
     .sort((a, b) => a.rank - b.rank || a.entry.position - b.entry.position)
     .map(({ entry }) => entry.slug);
 }

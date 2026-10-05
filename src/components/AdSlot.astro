@@ -1,0 +1,12 @@
+---
+interface Props {state?:'catalog'|'event';}
+const {state='catalog'}=Astro.props;
+---
+<aside class="ad-slot" data-ad-route={state} data-state="off" aria-label="Publicidade" hidden><p>Publicidade</p><span data-ad-status></span></aside>
+<script>
+import {loadAd,testAdAdapter} from '../lib/ads';
+// Test mode is build-time and requires development; production always stays off.
+const mode=import.meta.env.DEV?import.meta.env.PUBLIC_AD_TEST_MODE:undefined;
+document.querySelectorAll<HTMLElement>('.ad-slot').forEach(root=>{const state=root.dataset.adRoute as 'catalog'|'event';if(state==='event')return;const adapter=['filled','no-fill','error'].includes(mode)?testAdAdapter(mode):undefined;void loadAd(root,state,adapter).then(result=>{const status=root.querySelector('[data-ad-status]');if(status&&result!=='off')status.textContent=result==='filled'?'Demonstração local — não é um anúncio real.':result==='no-fill'?'Demonstração: sem anúncio disponível.':'Demonstração: falha isolada.';});});
+</script>
+<style>.ad-slot{min-height:120px;margin:2rem auto;padding:1rem;border:1px solid #c5ccc4;max-width:900px;background:#f3f2ee;text-align:center}@media(min-width:768px){.ad-slot{min-height:180px}}</style>
