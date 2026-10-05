@@ -4,6 +4,7 @@ import { spawn } from 'node:child_process';
 import { readFile, readdir } from 'node:fs/promises';
 import { createServer } from 'node:net';
 import { resolve } from 'node:path';
+import { assertShippedIndex } from './fixtures/home-search.mjs';
 
 const expected = new Map([
   ['aniversario', 'Aniversário'], ['ano-novo', 'Ano-Novo'], ['natal', 'Natal'],
@@ -52,7 +53,14 @@ test('static catalog, theme routes, assets and 404 at the configured base', asyn
   assert.match(home, /<html lang="pt-BR">/);
   assert.match(home, /<main id="conteudo">/);
   assert.ok(home.includes(`<link rel="canonical" href="${site}${base}"`));
-  assert.doesNotMatch(home, /<script\b/i);
+  assert.equal([...home.matchAll(/data-theme-slug="/g)].length, 15);
+  assert.match(home, /id="theme-search"[^>]*hidden/);
+  assert.match(home, /id="theme-search-index"[^>]*type="application\/json"/);
+  const executable = [...home.matchAll(/<script([^>]*)>/g)].map((match) => match[1]).filter((attrs) => !attrs.includes('application/json'));
+  assert.equal(executable.length, 1);
+  assert.ok(executable.every((attrs) => attrs.includes('type="module"') && (!attrs.includes('src=') || attrs.includes(`src="${base}_astro/`))));
+
+  assertShippedIndex(home);
 
   const hrefs = [...home.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   const sources = [...home.matchAll(/src="([^"]+)"/g)].map((match) => match[1]);

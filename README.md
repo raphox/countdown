@@ -1,6 +1,6 @@
 # Contagem — catálogo de temas
 
-Site Astro estático em pt-BR com quinze temas navegáveis. Nesta etapa, cada rota apresenta a ocasião e explica o funcionamento planejado. Criar eventos, acompanhar a contagem, busca, compartilhamento e artes finais ainda não estão disponíveis.
+Site Astro estático em pt-BR com quinze temas navegáveis. Nesta etapa, cada rota apresenta a ocasião e explica o funcionamento planejado. Criar eventos, acompanhar a contagem, compartilhamento e artes finais ainda não estão disponíveis.
 
 ## Desenvolvimento
 
@@ -29,9 +29,9 @@ Publique apenas `dist/` em uma hospedagem de arquivos estáticos. Configure o ho
 
 ## Estrutura
 
-- `src/data/themes.ts`: registro único de nomes, slugs, categorias, descrições, paletas e mensagens de encerramento para uso futuro.
+- `src/data/themes.ts`: registro único de nomes, slugs, categorias, descrições, aliases de busca, paletas e mensagens de encerramento para uso futuro.
 - `src/lib/paths.ts`: URLs internas compatíveis com `BASE_PATH`.
 - `src/pages/`: catálogo, quinze páginas geradas e erro 404.
 - `index.html` e `compiled/`: legado preservado, fora do build Astro.
 
-O site de produção usa fontes do sistema, texto e paletas em CSS. Não carrega CDNs, imagens remotas ou serviços externos. A interface funciona sem JavaScript nesta etapa; as funções de criação e contagem futuras dependerão dele.
+O site de produção usa fontes do sistema, texto e paletas em CSS. Não carrega CDNs, imagens remotas ou serviços externos. A galeria completa e as quinze páginas funcionam sem JavaScript. Com JavaScript, a home oferece busca local por nomes, categorias visíveis e aliases, sem requests durante consultas ou limpeza. O índice é gerado no build; edite `aliases` em `src/data/themes.ts` e gere novo build para acrescentar sinônimos. A busca ignora caixa, acentos e pontuação, compara palavras inteiras em um único campo e ordena nome exato, alias exato e palavras, com empates pela ordem do registry. Não pesquisa descrições, slugs ou eventos nem oferece prefixos, correção ou similaridade. As funções de criação e contagem futuras dependerão de JavaScript.

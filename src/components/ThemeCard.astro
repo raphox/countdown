@@ -4,7 +4,7 @@ import { themePath } from '../lib/paths';
 interface Props { theme: Theme; number: number; }
 const { theme, number } = Astro.props;
 ---
-<article class="theme-card" style={`--card-bg:${theme.colors.background};--card-accent:${theme.colors.accent};--card-soft:${theme.colors.soft}`}>
+<article data-theme-slug={theme.slug} class="theme-card" style={`--card-bg:${theme.colors.background};--card-accent:${theme.colors.accent};--card-soft:${theme.colors.soft}`}>
   <a href={themePath(theme.slug)} aria-label={`Conhecer o tema ${theme.name}`}>
     <div class="card-art" aria-hidden="true"><span class="art-ring"></span><span class="art-orbit"></span><span class="art-number">{String(number).padStart(2, '0')}</span><span class="art-spark">✳</span></div>
     <div class="card-copy"><span class="eyebrow">TEMA {String(number).padStart(2, '0')}</span><h3>{theme.name}</h3><p>{theme.description}</p><span class="card-arrow" aria-hidden="true">↗</span></div>
