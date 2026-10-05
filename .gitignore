@@ -1,1 +1,6 @@
 .DS_Store
+
+# Generated BMad workflow snapshots and Python caches
+_bmad/render/
+__pycache__/
+*.pyc
