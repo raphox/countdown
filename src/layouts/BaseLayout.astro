@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import { sitePath } from '../lib/paths';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f6f3ed" />
+    <link rel="canonical" href={canonical} />
+    <title>{title} | Contagem</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href={sitePath()} aria-label="Contagem, voltar ao catálogo"><span class="brand-mark" aria-hidden="true">◒</span> contagem<span class="brand-dot">.</span></a>
+        <nav aria-label="Navegação principal"><a href={sitePath()}>Explorar temas <span aria-hidden="true">↗</span></a></nav>
+      </div>
+    </header>
+    <main id="conteudo"><slot /></main>
+    <footer class="site-footer">
+      <div class="shell footer-inner"><span>contagem<span class="brand-dot">.</span></span><p>Um lugar para escolher a ocasião. Os contadores personalizados chegam nas próximas etapas.</p><a href={sitePath()}>Voltar ao catálogo ↑</a></div>
+    </footer>
+  </body>
+</html>

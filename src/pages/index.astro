@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeCard from '../components/ThemeCard.astro';
+import { categories, themes } from '../data/themes';
+---
+<BaseLayout title="Escolha uma ocasião" description="Explore quinze temas para futuras contagens regressivas de celebrações, conquistas, encontros e eventos.">
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> MOMENTOS QUE MERECEM SER CONTADOS</p><h1 id="hero-title">Cada ocasião tem <em>seu tempo.</em></h1><p class="hero-lead">Encontre um tema para o próximo momento especial. Nossa coleção reúne celebrações, conquistas, encontros e eventos em um só lugar.</p><a class="primary-link" href="#temas">Explorar os 15 temas <span aria-hidden="true">↘</span></a></div>
+    <div class="hero-visual" aria-hidden="true"><span class="hero-visual-ring ring-one"></span><span class="hero-visual-ring ring-two"></span><span class="hero-visual-sun"></span><span class="hero-visual-center">o tempo<br />de celebrar<span>✳</span></span><span class="hero-visual-caption">UM NOVO MOMENTO SE APROXIMA ·</span></div>
+  </section>
+  <section id="temas" class="catalog shell" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">A COLEÇÃO</p><h2 id="catalog-title">Uma ocasião para cada história.</h2></div><p>Escolha entre 15 temas para conhecer a proposta de cada página.</p></div>
+    {categories.map((category) => { const entries = themes.filter((theme) => theme.category === category.id); return <section class="category" aria-labelledby={`cat-${category.id}`}><div class="category-heading"><div><span class="category-index">0{categories.indexOf(category) + 1} / 04</span><h3 id={`cat-${category.id}`}>{category.name}</h3></div><p>{category.description}</p></div><div class="card-grid">{entries.map((theme) => <ThemeCard theme={theme} number={themes.indexOf(theme) + 1} />)}</div></section>; })}
+  </section>
+  <section class="info-band"><div class="shell info-inner"><span aria-hidden="true" class="info-symbol">✳</span><div><p class="eyebrow">EM CONSTRUÇÃO</p><h2>Por enquanto, explore os temas.</h2><p>As páginas já podem ser abertas e compartilhadas como referência. Criar um evento, escolher data e fuso horário e acompanhar a contagem exigirão JavaScript e serão adicionados nas próximas etapas.</p></div></div></section>
+</BaseLayout>
