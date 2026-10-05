@@ -1,0 +1,12 @@
+---
+import type { Theme } from '../data/themes';
+import { themePath, assetPath } from '../lib/paths';
+interface Props { theme: Theme; number: number; }
+const { theme, number } = Astro.props;
+---
+<article data-theme-slug={theme.slug} class="theme-card" style={`--card-bg:${theme.colors.background};--card-accent:${theme.colors.accent};--card-soft:${theme.colors.soft}`}>
+  <a href={themePath(theme.slug)} aria-label={`Criar contador: ${theme.name}`}>
+    <div class="card-art" aria-hidden="true"><img src={assetPath(theme.assets!.gallery!)} alt="" width="640" height="360" loading="lazy" /></div>
+    <div class="card-copy"><span class="eyebrow">TEMA {String(number).padStart(2, '0')}</span><h3>{theme.name}</h3><p>{theme.description}</p><span class="card-create">Criar contador <span aria-hidden="true">↗</span></span></div>
+  </a>
+</article>

@@ -1,0 +1,38 @@
+{
+  "hosting": {
+    "site": "contagemregressiva-48055",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "art/originals/**",
+      "fonts/originals/**",
+      "art/*-mobile-full.png",
+      "art/*-generation.json",
+      "**/manifest.json",
+      "**/*.md"
+    ],
+    "trailingSlash": true,
+    "headers": [
+      {
+        "source": "/_astro/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(png|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=86400"
+          }
+        ]
+      }
+    ]
+  }
+}

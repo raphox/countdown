@@ -1,0 +1,9 @@
+import {execFileSync} from 'node:child_process';
+import {writeFile,mkdir,readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const families=['Fraunces','Cinzel','Cormorant Garamond','Lora','Inter','Quicksand','DM Serif Display','Space Grotesk','Libre Baskerville','Outfit'];
+let pinned;try{pinned=JSON.parse(await readFile('public/fonts/manifest.json','utf8')).commit;}catch{/* first download */}
+const commit=pinned??JSON.parse(execFileSync('curl',['-fsSL','https://api.github.com/repos/google/fonts/commits/main'],{encoding:'utf8'})).sha;
+const manifest={source:'https://github.com/google/fonts',commit,downloaded:'2026-10-05',license:'OFL-1.1',families:[]};
+for(const family of families){const slug=family.toLowerCase().replaceAll(' ','');const origin=`https://raw.githubusercontent.com/google/fonts/${commit}/ofl/${slug}/`;const metadata=execFileSync('curl',['-fsSL',origin+'METADATA.pb'],{encoding:'utf8'});const blocks=[...metadata.matchAll(/fonts \{([\s\S]*?)\n\}/g)].map(x=>x[1]);const block=blocks.find(x=>/style: "normal"/.test(x))??blocks[0];const filename=block.match(/filename: "([^"]+)"/)[1];const source=origin+encodeURIComponent(filename);const local=`public/fonts/originals/${slug}.ttf`;execFileSync('curl',['-fsSL',source,'-o',local]);execFileSync('curl',['-fsSL',origin+'OFL.txt','-o',`public/fonts/licenses/${slug}-OFL.txt`]);await writeFile(`public/fonts/originals/${slug}-METADATA.pb`,metadata);const bytes=await readFile(local);manifest.families.push({family,slug,source,filename,original:`originals/${slug}.ttf`,font:`${slug}-latin.woff2`,license:`licenses/${slug}-OFL.txt`,sha256:createHash('sha256').update(bytes).digest('hex'),originalBytes:bytes.length});console.log(`${family}: ${filename} (${bytes.length} bytes)`);}
+await writeFile('public/fonts/manifest.json',JSON.stringify(manifest,null,2)+'\n');

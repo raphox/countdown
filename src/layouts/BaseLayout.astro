@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+import {localeFromPath,translate,localizedPath} from '../i18n/index';
+import {translateMarkup} from '../i18n/markup';
+import {fontFace,fontFamily,type FontName} from '../data/fonts';
+import { sitePath, assetPath } from '../lib/paths';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogAlt?: string;
+  headingFont?: FontName;
+}
+const { title, description, ogImage, ogAlt, headingFont='Fraunces' } = Astro.props;
+const locale=localeFromPath(Astro.url.pathname);
+const t=(text:string)=>translate(text,locale);
+const canonical = new URL(localizedPath(Astro.url.pathname,locale,import.meta.env.BASE_URL), Astro.site).href;
+const content=translateMarkup(await Astro.slots.render('default'),locale,import.meta.env.BASE_URL);
+const home=localizedPath(sitePath(),locale,import.meta.env.BASE_URL);
+const uses=localizedPath(sitePath('como-usar'),locale,import.meta.env.BASE_URL);
+const privacy=localizedPath(sitePath('privacidade'),locale,import.meta.env.BASE_URL);
+const languages=[{locale:'pt-BR' as const,label:'Português (BR)'},{locale:'en-US' as const,label:'English (US)'}];
+---
+<!doctype html>
+<html lang={locale} style={`--heading-font:${fontFamily(headingFont)}`}>
+  <head>
+    <meta charset="UTF-8" />
+    <style is:inline set:html={fontFace('Inter', import.meta.env.BASE_URL)} />
+    <style id="theme-font-face" is:inline set:html={headingFont==='Inter'?'':fontFace(headingFont, import.meta.env.BASE_URL)} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={t(description)} />
+    <meta name="theme-color" content="#f6f3ed" />
+    <link rel="canonical" href={canonical} />
+    {languages.map(language=><link rel="alternate" hreflang={language.locale} href={new URL(localizedPath(Astro.url.pathname,language.locale,import.meta.env.BASE_URL),Astro.site).href} />)}
+    <meta property="og:locale" content={locale.replace('-','_')} />
+    <meta property="og:locale:alternate" content={locale==='en-US'?'pt_BR':'en_US'} />
+    <meta property="og:title" content={`${t(title)} | Contagem`} />
+    <meta property="og:description" content={t(description)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <><meta property="og:image" content={new URL(assetPath(ogImage), Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={t(ogAlt ?? title)} /></>}
+    <meta name="referrer" content="no-referrer" />
+    <title>{t(title)} | Contagem</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">{t('Pular para o conteúdo')}</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href={home} aria-label={t('Contagem, voltar ao catálogo')}><span class="brand-mark" aria-hidden="true">◒</span> contagem<span class="brand-dot">.</span></a>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label={t('Abrir menu')}><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="menu-lines" d="M4 6h16M4 12h16M4 18h16"/><path class="menu-close" d="m6 6 12 12M6 18 18 6"/></svg><span>Menu</span></button>
+        <nav id="primary-navigation" aria-label={t('Navegação principal')}><a href={uses} aria-current={Astro.url.pathname.includes('/como-usar')?'page':undefined}>{locale==='en-US'?'Ways to use':'Como usar'}</a><a href={home}>{t('Explorar temas')} <span aria-hidden="true">↗</span></a><div class="language-switch" aria-label={locale==='en-US'?'Language':'Idioma'}>{languages.map(language=><a data-language={language.locale} lang={language.locale} hreflang={language.locale} aria-current={language.locale===locale?'true':undefined} href={localizedPath(Astro.url.pathname,language.locale,import.meta.env.BASE_URL)}>{language.label}</a>)}</div></nav>
+      </div>
+    </header>
+    <main id="conteudo" tabindex="-1"><Fragment set:html={content} /></main>
+    <footer class="site-footer">
+      <div class="shell footer-inner"><span>contagem<span class="brand-dot">.</span></span><p>{t('Crie seu contador e compartilhe o próximo momento. Sem cadastro.')}</p><a href={home}>{t('Voltar ao catálogo ↑')}</a><a href={privacy}>{t('Privacidade e serviços')}</a></div>
+    </footer>
+  </body>
+</html>
+<script>
+ import {initMobileMenu} from '../lib/mobile-menu';
+ import {initSkipLink} from '../lib/skip-link';
+ import {localizeNotFound} from '../lib/not-found-locale';
+ import {initLanguageSwitch} from '../lib/language-switch';
+ localizeNotFound();initSkipLink();initLanguageSwitch();initMobileMenu();
+</script>

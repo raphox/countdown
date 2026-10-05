@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Premium raster PNG countdown background, theme gathering of friends. Landscape 16:9. Warm light sand linen texture across entirely empty central 70 percent for dark HTML title/countdown. Outer corners only hold charming realistic still-life details of friendship: terracotta and teal ceramic coffee mugs, a small vintage instant camera, blank photo prints tucked at far edge, a woven picnic corner, subtle eucalyptus leaves and a few tiny warm string lights. Rich tactile paper/ceramic material, refined contemporary editorial photography/illustration, warmly convivial rather than childish. Objects only at corners and outer edges, center completely empty and uniformly light. All genders, no people, no alcohol emphasis, no text, numbers, letters, logos or watermarks. Artwork not UI.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-58b0d85a-579d-4102-a74e-02df2d223988.png",
+    "original": "originals/encontro-amigos-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: supplied friends gathering background. Create a dedicated portrait 9:16 PNG composition, not a crop. Preserve the reference palette, realistic tactile textures, lighting and object identity. Recompose all objects tightly to the outer top and bottom corners with very narrow side edges; central 85 percent width and 70 percent height must remain completely empty and uniformly light warm linen for dark HTML title and 2x2 countdown. No text, numbers, letters, logos, watermark, people or gender cues. Refined finished raster artwork only.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-d3078688-d3e0-494c-ad3b-e4c8b2752f51.png",
+    "original": "originals/encontro-amigos-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

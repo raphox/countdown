@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventApp from '../components/EventApp.astro';
+import { categories, themes, type Theme } from '../data/themes';
+import { sitePath } from '../lib/paths';
+
+export function getStaticPaths() { return themes.map((theme) => ({ params: { theme: theme.slug }, props: { theme } })); }
+interface Props { theme: Theme; }
+const { theme } = Astro.props;
+const category = categories.find((item) => item.id === theme.category)!;
+const themeNumber = themes.findIndex((item) => item.slug === theme.slug) + 1;
+---
+<BaseLayout headingFont={theme.font} ogImage={theme.assets!.og} ogAlt={`Arte de ${theme.name}`} title={theme.name} description={`${theme.description} Crie e compartilhe seu contador com data e fuso horário.`}>
+  <div class="theme-page shell" style={`--card-bg:${theme.colors.background};--card-accent:${theme.colors.accent};--card-soft:${theme.colors.soft}`}>
+    <nav class="breadcrumbs" aria-label="Você está aqui"><a href={sitePath()}>Todos os temas</a><span aria-hidden="true">/</span><span>{theme.name}</span></nav>
+    <section class="theme-hero" aria-labelledby="theme-title"><div class="theme-hero-copy"><p class="eyebrow">{category.name} <span aria-hidden="true">/</span> TEMA {String(themeNumber).padStart(2, '0')}</p><h1 id="theme-title">{theme.name}</h1><p class="theme-intro">{theme.description}</p></div></section>
+    <EventApp theme={theme} />
+    <section class="theme-details" aria-label="Sobre este tema"><div><p class="eyebrow">SOBRE A EXPERIÊNCIA</p><h2>Um momento para chamar de seu.</h2></div><div><p id="theme-about">Crie um evento com o tema {theme.name.toLowerCase()}, escolha título, data, horário e fuso horário, confira a prévia e compartilhe o link. Qualquer pessoa pode duplicar e personalizar uma cópia sem modificar o original.</p><p>O horário escolhido será associado ao fuso do evento para que a mesma ocasião possa ser acompanhada de lugares diferentes.</p><p class="coming-note">A criação e a contagem exigem JavaScript no navegador. Os dados completos ficam no link; não há cadastro ou banco de eventos.</p></div></section>
+    <div class="theme-next"><span>CONTINUE EXPLORANDO</span><a href={sitePath()}>Descubra outra ocasião <span aria-hidden="true">↗</span></a></div>
+  </div>
+</BaseLayout>

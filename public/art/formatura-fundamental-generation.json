@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Final desktop PNG landscape 16:9 ideally 1920x1080. Formatura do ensino fundamental: joyful tactile paper craft, open books with blank pages, little folded paper airplanes and dimensional stars confined to perimeter. Sky blue, coral and sunny yellow on warm cream. Celebrate learning and new beginnings with playful age-appropriate objects for children of any gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f8066669-6c21-4c06-ab1a-68111c92d36f.png",
+    "original": "originals/formatura-fundamental-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: attached fundamental graduation desktop illustration. Dedicated portrait 9:16 mobile PNG ideally 1080x1920. Preserve identity, materials and palette. Recompose objects to top/bottom outer corners, not a crop; broad quiet center and safe side margins. Formatura do ensino fundamental: joyful tactile paper craft, open books with blank pages, little folded paper airplanes and dimensional stars confined to perimeter. Sky blue, coral and sunny yellow on warm cream. Celebrate learning and new beginnings with playful age-appropriate objects for children of any gender. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. Inclusive for every gender: no gender-coded characters, gender symbols, stereotypes or exclusively masculine/feminine styling; colors express the occasion only. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-cff6736f-b17b-4191-93d0-26f9c7658c1d.png",
+    "original": "originals/formatura-fundamental-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

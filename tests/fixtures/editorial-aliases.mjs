@@ -1,0 +1,22 @@
+// Independent acceptance fixture from busca-de-temas.md; do not derive from registry.
+export const editorialAliases = {
+  aniversario: ['niver', 'festa de aniversário', 'festa de anos'],
+  'ano-novo': ['réveillon', 'virada do ano', 'fim de ano'],
+  natal: ['ceia natalina', 'festa de natal', 'confraternização natalina'],
+  familia: ['encontro familiar', 'reunião de família', 'almoço em família'],
+  empresa: ['confraternização', 'confraternização da empresa', 'reunião de equipe', 'encontro corporativo', 'team building'],
+  'formatura-fundamental': ['formatura fundamental', 'formatura do fundamental', 'formatura escolar', 'conclusão do ensino fundamental'],
+  'formatura-ensino-medio': ['formatura colegial', 'formatura ensino médio', 'formatura segundo grau', 'conclusão do ensino médio'],
+  'formatura-faculdade': ['colação de grau', 'formatura universitária', 'graduação', 'conclusão da faculdade'],
+  casamento: ['matrimônio', 'cerimônia de casamento', 'festa de casamento'],
+  viagem: ['férias', 'viagem de férias', 'partida', 'embarque'],
+  'cha-de-bebe': ['chá de fraldas', 'baby shower', 'chegada do bebê'],
+  'evento-tecnologia': ['tech', 'TI', 'informática', 'programação', 'conferência de tecnologia'],
+  'evento-medicina': ['saúde', 'congresso médico', 'simpósio de medicina', 'jornada médica'],
+  'evento-direito': ['jurídico', 'advocacia', 'congresso jurídico', 'seminário de direito'],
+  festa: ['festa genérica', 'balada', 'comemoração', 'carnaval'],
+  'evento-politico': ['política', 'posse', 'assumir cargo', 'cargo político', 'debate político', 'encontro político', 'convenção política', 'comício'],
+  zoeira: ['zueira', 'zoar', 'brincadeira', 'resenha', 'humor', 'fazer graça', 'piada', 'meme', 'amigos'],
+  'encontro-amigos': ['amigos', 'encontro com amigos', 'reunião de amigos', 'turma', 'rever amigos', 'reencontro'],
+  jantar: ['jantar especial', 'jantar entre amigos', 'jantar em família', 'jantar de confraternização', 'noite à mesa'],
+};

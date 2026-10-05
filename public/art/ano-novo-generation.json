@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Asset: final desktop PNG, landscape 16:9, ideally 1920x1080. Ano-Novo: a sophisticated deep midnight-blue night sky with finely painted golden fireworks confined to the far outer corners, delicate luminous golden dust along the perimeter, restrained celebratory glow. Midnight blue, champagne gold and subtle indigo. No balloons, no florals. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage. Asymmetrical framing at outer edges, broad clean center.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-5eaa927d-4454-4e03-9810-f1e4be09eb0c.png",
+    "original": "originals/ano-novo-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: the just-generated Ano-Novo desktop illustration. Make a dedicated portrait 9:16 mobile PNG, ideally 1080x1920, matching its identity and palette. Recompose fireworks toward top and bottom corners rather than cropping the landscape; maintain a broad dark quiet center and comfortable side margins for long HTML content and a 2x2 countdown. Ano-Novo: a sophisticated deep midnight-blue night sky with finely painted golden fireworks confined to the far outer corners, delicate luminous golden dust along the perimeter, restrained celebratory glow. Midnight blue, champagne gold and subtle indigo. No balloons, no florals. Premium original raster editorial illustration for a Brazilian countdown website. Tactile painted textures, rich material detail, beautiful soft atmospheric lighting and dimensional depth, professional finished art, not flat vector-like shapes. No text, letters, numbers, logos, watermark, people or UI. Keep central 65 percent exceptionally quiet and free of objects for dynamic HTML event title/date/message/countdown. One opaque complete image, never a montage.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-ab0f2ca6-9fc5-4050-90cc-e1b373d8242b.png",
+    "original": "originals/ano-novo-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

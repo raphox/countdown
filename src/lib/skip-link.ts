@@ -1,0 +1,2 @@
+/** Focus the main landmark without replacing a fragment containing event data. */
+export function initSkipLink(){const link=document.querySelector<HTMLAnchorElement>('.skip-link');const main=document.getElementById('conteudo');if(!link||!main)return;link.addEventListener('click',event=>{event.preventDefault();main.focus({preventScroll:true});main.scrollIntoView({block:'start',behavior:'instant'});});}

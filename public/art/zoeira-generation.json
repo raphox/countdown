@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Create a premium playful raster PNG background for a countdown website theme: harmless jokes and goofing around with friends (zoeira). Landscape 16:9 composition. Warm pale buttery cream textured paper with a very spacious empty central area (central 70 percent width and 65 percent height quiet and light for dark dynamic HTML title and countdown). Around the far outer corners only: tactile whimsical 3D googly eyes peeking from colorful clay blobs, a tiny rubber duck, curled party streamers, springy squiggles and sparse confetti in cobalt blue, tangerine, violet and sunny yellow. Funny, charming, irreverent and contemporary, premium detailed clay/paper still life with realistic soft shadows, suitable for all genders and adults as well as friends of all ages. Objects must stay at the border and corners leaving the center completely empty. No humans, no typography, no numbers, no letters, no logos, no watermark, no screenshot or UI.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-bee20805-ddce-43a4-b68c-8272fc8f7743.png",
+    "original": "originals/zoeira-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: supplied playful zoeira countdown artwork. Create a dedicated PORTRAIT 9:16 mobile composition, not a crop. Preserve the cream textured paper, colorful clay blobs with googly eyes, rubber duck with sunglasses, streamers, confetti, premium tactile 3D style. Recompose to the top and bottom OUTER corners, keep ALL objects outside the central 70 percent height and central 85 percent width. Broad empty uniformly pale cream center for dark dynamic HTML title and a 2x2 countdown. Playful for all genders. No text, numbers, letters, logo, signature or watermark anywhere. Artwork only.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-21af8d1f-0d41-4153-ac4b-aac13309ae23.png",
+    "original": "originals/zoeira-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

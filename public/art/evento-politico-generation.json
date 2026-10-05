@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "desktop",
+    "prompt": "Use case: stylized-concept. Final premium PNG background for a cheerful political event countdown. LANDSCAPE 16:9. User requests a LIGHT background and MUCH LARGER generic flags. Bright warm ivory/cream gently textured backdrop, even soft daylight, absolutely no dark background. Four very large billowing plain solid-color fabric flags, two at the left outer side/corners and two at the right outer side/corners, cropped by the image edges so they feel monumental and festive. Colors teal, warm golden yellow, coral and soft violet, no specific national combination. Flags have elegant broad fabric folds and long subtle poles; tasteful sparse confetti near edges. Flags occupy the outer left 20% and right 20%, upper/lower corners with confident large scale, but central 60% width and central 65% height remain empty clean light cream for dark HTML title and countdown. A jubilant public celebration, welcoming, polished realistic tactile fabric with subtle soft shadows. No columns, podium, mic, documents, people, gender cues, party/national emblems, stripes, text, numbers, logos or watermark. Artwork only, no UI.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-22cb0dc4-7a9e-41c3-b2cd-c0f9c859f2f8.png",
+    "original": "originals/evento-politico-desktop.png",
+    "generator": "OpenAI built-in image_gen"
+  },
+  {
+    "variant": "mobile",
+    "prompt": "Use case: compositing. Edit target: supplied LIGHT political-event artwork with large flowing flags. Create a dedicated PORTRAIT 9:16 mobile PNG, not a crop. Preserve bright warm ivory paper background, large plain teal/coral/golden-yellow/violet fabric flags, realistic folds, soft daylight and celebratory sparse confetti. User explicitly wants LARGE flags, so put two large cropped flags in the TOP corners and two large cropped flags in the BOTTOM corners; each occupies a substantial corner, while the central 60 percent of image height stays entirely light ivory and free of objects for dark dynamic HTML title and 2x2 clock. Keep side center edges quiet too. No dark background, no columns, mic, podium, people, emblems, national designs, stripes, gender cues, writing, numbers, logos or watermarks. Polished festive raster background, not UI.",
+    "source": "/Users/raphox/.codex/generated_images/01a10c00-f11a-7702-a322-ac0f9e810684/exec-f520ff08-c403-4ff9-baf0-23892939d86b.png",
+    "original": "originals/evento-politico-mobile.png",
+    "generator": "OpenAI built-in image_gen"
+  }
+]

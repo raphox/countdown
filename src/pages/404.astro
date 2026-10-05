@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sitePath } from '../lib/paths';
+---
+<BaseLayout title="Página não encontrada" description="Esta página não existe. Volte ao catálogo para explorar os temas disponíveis.">
+  <section class="not-found shell"><p class="eyebrow">CAMINHO NÃO ENCONTRADO</p><span class="error-code" aria-hidden="true">404</span><h1>Por aqui, o tempo parou.</h1><p>Esta página não existe ou o endereço mudou. Você pode voltar ao catálogo e escolher um dos temas disponíveis.</p><a class="primary-link" href={sitePath()}>Ir para o catálogo <span aria-hidden="true">↗</span></a></section>
+</BaseLayout>
